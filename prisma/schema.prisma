@@ -1,0 +1,61 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model ChapterProgress {
+  id          String   @id @default(cuid())
+  userId      String   @default("anonymous")
+  chapterId   String
+  completed   Boolean  @default(false)
+  progress    Float    @default(0)
+  lastVisited DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([userId, chapterId])
+  @@index([userId])
+}
+
+model QuizAttempt {
+  id          String   @id @default(cuid())
+  userId      String   @default("anonymous")
+  chapterId   String
+  quizId      String
+  score       Float
+  totalQuestions Int
+  answers     String // JSON stringified
+  createdAt   DateTime @default(now())
+
+  @@index([userId, chapterId])
+}
+
+model FlashcardReview {
+  id          String   @id @default(cuid())
+  userId      String   @default("anonymous")
+  cardId      String
+  chapterId   String
+  difficulty  Int      @default(0) // 0=again, 1=hard, 2=good, 3=easy
+  interval    Int      @default(1) // days until next review
+  repetitions Int      @default(0)
+  easeFactor  Float    @default(2.5)
+  nextReview  DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([userId, cardId])
+  @@index([userId, nextReview])
+}
+
+model UserSettings {
+  id              String   @id @default(cuid())
+  userId          String   @unique @default("anonymous")
+  darkMode        Boolean  @default(false)
+  cardsPerSession Int      @default(20)
+  updatedAt       DateTime @updatedAt
+}

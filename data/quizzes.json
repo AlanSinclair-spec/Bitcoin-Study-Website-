@@ -1,0 +1,158 @@
+[
+  {
+    "id": "exec-q1",
+    "chapterId": "executive-summary",
+    "type": "mcq",
+    "question": "According to Lowery's thesis, what is the primary strategic significance of Bitcoin?",
+    "options": [
+      "It provides physical cost constraints in cyberspace through Proof-of-Work",
+      "It eliminates the need for traditional military power",
+      "It creates a purely digital form of money",
+      "It replaces national currencies"
+    ],
+    "correctAnswer": "It provides physical cost constraints in cyberspace through Proof-of-Work",
+    "explanation": "The thesis central argument is that Proof-of-Work introduces physical costs (energy, hardware) into cyber operations, creating strategic dynamics similar to kinetic military power.",
+    "section": "Executive Summary - Core Thesis"
+  },
+  {
+    "id": "exec-q2",
+    "chapterId": "executive-summary",
+    "type": "mcq",
+    "question": "What does 'Softwar' refer to in the context of this thesis?",
+    "options": [
+      "Traditional software development",
+      "Power projection through Proof-of-Work systems with physical costs",
+      "Cyber warfare without physical infrastructure",
+      "Social media manipulation campaigns"
+    ],
+    "correctAnswer": "Power projection through Proof-of-Work systems with physical costs",
+    "explanation": "Softwar specifically refers to projecting power via PoW systems that impose real physical resource expenditure, bridging physical and digital domains.",
+    "section": "Executive Summary - The Softwar Concept"
+  },
+  {
+    "id": "exec-q3",
+    "chapterId": "executive-summary",
+    "type": "mcq",
+    "question": "The 'Electro-Cyber Dome' concept is analogous to:",
+    "options": [
+      "A firewall protecting a network",
+      "A military defensive perimeter established through accumulated hash power",
+      "An encryption protocol",
+      "A database access control system"
+    ],
+    "correctAnswer": "A military defensive perimeter established through accumulated hash power",
+    "explanation": "The Electro-Cyber Dome parallels traditional military defensive systems, where accumulated hash power creates a protective barrier against attacks.",
+    "section": "Executive Summary - National Security Implications"
+  },
+  {
+    "id": "exec-sa1",
+    "chapterId": "executive-summary",
+    "type": "short-answer",
+    "question": "Explain how Proof-of-Work introduces physical constraints into cyberspace and why this matters for national security.",
+    "correctAnswer": "PoW requires real energy expenditure and hardware investment that cannot be replicated without equivalent costs. This matters for national security because it enables deterrence mechanisms, creates measurable defensive capabilities (hash rate), and allows traditional strategic frameworks to apply in the cyber domain.",
+    "explanation": "This question tests understanding of the bridge between physical and cyber domains, and the strategic implications of imposing real-world costs on digital operations.",
+    "section": "Executive Summary - Core Thesis"
+  },
+  {
+    "id": "exec-sa2",
+    "chapterId": "executive-summary",
+    "type": "short-answer",
+    "question": "What are two key policy recommendations from the executive summary, and what strategic rationale underlies each?",
+    "correctAnswer": "1) Recognize Bitcoin as strategic technology—nations that understand it gain competitive advantages. 2) Invest in domestic hash rate capacity—this builds defensive cyber capabilities and prevents adversary dominance in PoW-based power projection.",
+    "explanation": "This tests comprehension of policy implications and the ability to connect recommendations to strategic logic.",
+    "section": "Executive Summary - Policy Recommendations"
+  },
+  {
+    "id": "ch1-q1",
+    "chapterId": "ch1",
+    "type": "mcq",
+    "question": "What historical precedent does Chapter 1 use to illustrate how new technology disrupts strategic balance?",
+    "options": [
+      "The invention of the internet",
+      "The Fall of Constantinople and gunpowder weapons",
+      "The discovery of penicillin",
+      "The development of aviation"
+    ],
+    "correctAnswer": "The Fall of Constantinople and gunpowder weapons",
+    "explanation": "The chapter uses Constantinople (1453) where Orban's cannons overcame previously impregnable walls, showing how gunpowder fundamentally shifted offensive/defensive power dynamics.",
+    "section": "Chapter 1 - Historical Case Studies"
+  },
+  {
+    "id": "ch1-q2",
+    "chapterId": "ch1",
+    "type": "mcq",
+    "question": "According to Clausewitz's theory cited in Chapter 1, war is:",
+    "options": [
+      "An irrational breakdown of diplomacy",
+      "The continuation of politics by other means",
+      "Primarily an economic competition",
+      "Only justified for defensive purposes"
+    ],
+    "correctAnswer": "The continuation of politics by other means",
+    "explanation": "Clausewitz's famous dictum positions war as serving strategic political objectives, a principle the thesis extends to cyber power projection.",
+    "section": "Chapter 1 - Clausewitz and War Theory"
+  },
+  {
+    "id": "ch1-q3",
+    "chapterId": "ch1",
+    "type": "mcq",
+    "question": "What fundamental challenge does cyberspace pose for traditional power projection?",
+    "options": [
+      "It's too expensive to operate in",
+      "Code can be copied infinitely at near-zero marginal cost",
+      "It's geographically limited",
+      "It requires too much energy"
+    ],
+    "correctAnswer": "Code can be copied infinitely at near-zero marginal cost",
+    "explanation": "The 'physical cost gap' in cyberspace—the ability to replicate operations without resource constraints—makes traditional deterrence and strategic frameworks difficult to apply.",
+    "section": "Chapter 1 - The Cyber Domain Challenge"
+  },
+  {
+    "id": "ch1-q4",
+    "chapterId": "ch1",
+    "type": "mcq",
+    "question": "Nuclear weapons demonstrate power projection primarily through:",
+    "options": [
+      "Actual use in warfare",
+      "Economic sanctions",
+      "Deterrence via credible threat",
+      "Conventional military superiority"
+    ],
+    "correctAnswer": "Deterrence via credible threat",
+    "explanation": "Nuclear weapons project power through the credible threat of retaliation (MAD - Mutual Assured Destruction), not necessarily through use.",
+    "section": "Chapter 1 - The Nuclear Age"
+  },
+  {
+    "id": "ch1-q5",
+    "chapterId": "ch1",
+    "type": "mcq",
+    "question": "Which of the following is NOT listed as a component of power projection?",
+    "options": [
+      "Reach",
+      "Persistence",
+      "Morality",
+      "Cost"
+    ],
+    "correctAnswer": "Morality",
+    "explanation": "The four components are Reach, Persistence, Cost, and Effectiveness. Morality is not a technical component of power projection capability.",
+    "section": "Chapter 1 - Defining Power Projection"
+  },
+  {
+    "id": "ch1-sa1",
+    "chapterId": "ch1",
+    "type": "short-answer",
+    "question": "Compare and contrast how gunpowder and nuclear weapons each reshaped strategic competition, and explain how these precedents relate to Bitcoin.",
+    "correctAnswer": "Gunpowder: Made defensive fortifications vulnerable, democratized offensive power. Nuclear: Created ultimate deterrence through MAD, required massive investment. Bitcoin parallel: Introduces physical costs in cyber domain, enables deterrence, creates competitive dynamics in hash rate accumulation. All three represent transformative technologies requiring new strategic doctrines.",
+    "explanation": "This tests synthesis across historical examples and application to the Bitcoin thesis.",
+    "section": "Chapter 1 - Historical Case Studies"
+  },
+  {
+    "id": "ch1-sa2",
+    "chapterId": "ch1",
+    "type": "short-answer",
+    "question": "Explain the 'physical cost gap' in cyberspace and how Proof-of-Work addresses it.",
+    "correctAnswer": "The physical cost gap: Traditional cyber operations lack physical constraints—code copies infinitely at near-zero cost, making deterrence difficult. PoW solution: Requires energy expenditure, hardware investment, and time that cannot be replicated without equivalent costs. This creates objective, verifiable physical constraints enabling strategic frameworks.",
+    "explanation": "Tests understanding of the core problem PoW solves in the cyber strategic domain.",
+    "section": "Chapter 1 - The Cyber Domain Challenge"
+  }
+]

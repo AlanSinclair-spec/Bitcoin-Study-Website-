@@ -1,0 +1,105 @@
+---
+title: "Security and Technology"
+lesson: "4"
+order: 4
+tags: ["security", "keys", "wallets", "energy"]
+glossaryTerms: ["private-key", "public-key", "double-spending", "cold-wallet", "hash"]
+---
+
+# Security and Technology
+
+## Private and Public Keys
+
+Bitcoin security relies on **cryptography**—mathematical locks that only you can open.
+
+### Your Public Key (Address)
+- Like your email address or bank account number
+- Safe to share publicly
+- Others use it to send you Bitcoin
+
+### Your Private Key
+- Like your email password or bank PIN
+- **Never share this with anyone**
+- Gives complete control over your Bitcoin
+
+<KeyTakeaway>
+**"Not your keys, not your coins"**: If someone else (like an exchange) holds your private keys, they control your Bitcoin. True ownership means holding your own keys.
+</KeyTakeaway>
+
+## How Bitcoin Stays Secure
+
+1. **Cryptographic Signatures**: Your private key creates a unique signature for each transaction that proves you authorized it
+2. **Hash Functions**: One-way math that makes tampering detectable
+3. **Network Consensus**: Thousands of nodes validate every transaction
+4. **Proof-of-Work**: Massive computational effort required to attack
+
+**Cost to Attack**: You'd need to control 51% of all mining power globally—estimated at billions of dollars in hardware and electricity per hour.
+
+## The Double-Spending Problem
+
+Before Bitcoin, digital money had a fatal flaw: **copying**. If money is just data, can't you copy-paste it and spend twice?
+
+**Bitcoin's Solution**:
+1. Every transaction is broadcast to the whole network
+2. Miners include transactions in blocks
+3. The blockchain records which coins moved where
+4. Trying to spend the same coin twice gets rejected by nodes
+
+This is Bitcoin's core innovation: solving double-spending without a central authority.
+
+## Losing Access to Wallets
+
+**If you lose your private keys, your Bitcoin is gone forever.** No one can recover it—not Bitcoin developers, not miners, nobody.
+
+### Best Practices
+
+1. **Write down your seed phrase** (12-24 words) on paper
+2. **Store multiple copies** in secure locations (safe, bank vault)
+3. **Never store digitally** (no photos, no cloud storage)
+4. **Test your backup** by restoring to a new wallet
+
+<EverydayApplication>
+**Responsibility Trade-off**: You gain complete control but accept complete responsibility. It's like being handed a briefcase of cash—ultimate freedom, ultimate accountability.
+</EverydayApplication>
+
+## Energy Use and Environmental Debates
+
+Bitcoin uses approximately 0.5% of global electricity—comparable to all data centers or Christmas lights worldwide.
+
+### The Environmental Concern
+Critics argue Bitcoin's energy use contributes to climate change and is wasteful.
+
+### The Counterarguments
+1. **Security Requires Energy**: The energy isn't wasted—it's the cost of securing a global, permissionless monetary system
+2. **Renewable Mining**: ~60% of Bitcoin mining uses renewable energy (hydro, solar, wind)
+3. **Stranded Energy**: Miners utilize energy that would otherwise be wasted (flared gas, excess hydro)
+4. **Banking Comparison**: Traditional banking's total energy use (buildings, ATMs, armored cars, servers) exceeds Bitcoin's
+
+### The Data Gap
+We lack precise data for either system's full environmental impact, making definitive comparisons difficult.
+
+## Key Takeaways
+
+1. **Private keys** give complete control; lose them and lose your Bitcoin
+2. **Public keys** are safe to share for receiving Bitcoin
+3. **Double-spending** is prevented by network consensus and Proof-of-Work
+4. **Energy debate** has valid points on both sides; data is incomplete
+5. **Self-custody** means you are your own bank—with all the responsibility
+
+## Everyday Application
+
+**This Week**: Practice the security model with a test wallet and tiny amount ($5). Write down seed phrase, delete wallet, restore from seed phrase. This builds confidence.
+
+## Reflect
+
+1. What's one digital account where you wish you had full control without relying on a company? Could Bitcoin's key model apply?
+
+2. Is the energy trade-off worth it? Under what conditions would you say yes or no?
+
+## Glossary Terms
+
+- **Private Key**: Secret code that controls your Bitcoin
+- **Public Key**: Address others use to send you Bitcoin
+- **Double-Spending**: Fraudulently spending the same coin twice
+- **Cold Wallet**: Offline storage device for maximum security
+- **Hash**: One-way cryptographic function used throughout Bitcoin

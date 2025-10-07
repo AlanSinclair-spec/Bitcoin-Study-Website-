@@ -1,0 +1,148 @@
+---
+title: "How Bitcoin Works"
+lesson: "2"
+order: 2
+tags: ["blockchain", "mining", "technology", "nodes"]
+glossaryTerms: ["blockchain", "mining", "halving", "nodes", "proof-of-work"]
+---
+
+# How Bitcoin Works
+
+## Blockchain Explained Simply
+
+Imagine a notebook that records every Bitcoin transaction ever made. Now imagine that thousands of people around the world each have an identical copy of this notebook, and they all update it together.
+
+That's the blockchain: a shared record (or "ledger") of all Bitcoin transactions, stored across many computers. Every 10 minutes or so, a new "page" (called a block) gets added to the notebook, and everyone's copy updates.
+
+### Why This Matters
+
+- **No one can cheat**: If you try to change your copy, everyone else's copies won't match
+- **No single point of failure**: One computer going offline doesn't stop Bitcoin
+- **History is permanent**: Once a transaction is recorded, it can't be erased
+
+<KeyTakeaway>
+**The Blockchain** is simply a chain of transaction records (blocks) that everyone agrees on. Think of it as a public, tamper-proof accounting book.
+</KeyTakeaway>
+
+## What Mining Is
+
+Mining is how new Bitcoin gets created and how transactions get confirmed. Miners are computers competing to solve complex math puzzles. The first to solve the puzzle gets to:
+
+1. Add the next block of transactions to the blockchain
+2. Receive new Bitcoin as a reward (currently 3.125 BTC per block)
+3. Collect transaction fees from people sending Bitcoin
+
+### Mining in Everyday Terms
+
+Think of mining like a lottery where:
+- Your ticket is computer power (more power = more tickets)
+- Drawing happens every 10 minutes
+- The winner gets newly created Bitcoin
+- The work of running the lottery secures the entire network
+
+Miners aren't just getting rich—they're providing the computational work that makes Bitcoin secure and decentralized.
+
+## Bitcoin Halving
+
+Every 210,000 blocks (roughly every 4 years), the reward for mining gets cut in half. This is called "the halving."
+
+**Halving Schedule**:
+- 2009-2012: 50 BTC per block
+- 2012-2016: 25 BTC per block
+- 2016-2020: 12.5 BTC per block
+- 2020-2024: 6.25 BTC per block
+- 2024-2028: 3.125 BTC per block
+- ...continues until ~2140 when all 21 million Bitcoin will be mined
+
+### Why Halving Happens
+
+The halving ensures that Bitcoin's supply grows predictably and eventually stops. It creates scarcity over time—like mining gold from the ground, it gets harder to find new Bitcoin as time passes.
+
+<EverydayApplication>
+**Real Impact**: Halvings often precede major Bitcoin price increases because the supply of new Bitcoin entering the market suddenly drops. Understanding this cycle helps you think long-term about Bitcoin's value.
+</EverydayApplication>
+
+## What Nodes Are
+
+A node is any computer running Bitcoin software that keeps a full copy of the blockchain. There are thousands of nodes worldwide, all checking each other's work.
+
+### What Nodes Do
+
+1. **Store the entire blockchain** (currently ~500 GB)
+2. **Validate transactions** according to Bitcoin's rules
+3. **Relay information** to other nodes
+4. **Reject invalid transactions** automatically
+
+You can run a node from home on a basic computer. This helps secure the network and lets you verify transactions yourself without trusting anyone else.
+
+### Nodes vs. Miners
+
+- **Nodes**: Verify and enforce the rules (anyone can run one)
+- **Miners**: Compete to add new blocks and earn rewards (requires specialized hardware)
+
+All miners are nodes, but not all nodes are miners.
+
+## Proof-of-Work in Everyday Terms
+
+Proof-of-Work (PoW) is Bitcoin's security mechanism. It makes attacking the network extremely expensive because you'd need to:
+
+1. Control more computing power than all honest miners combined
+2. Burn enormous amounts of electricity
+3. Compete against everyone else trying to mine honestly
+
+### The Energy-Security Connection
+
+Yes, Bitcoin uses a lot of energy—but that's the point. The energy expenditure is what makes Bitcoin secure. It's like a massive, global lock that would cost billions to break.
+
+Think of it this way: Fort Knox uses physical walls and guards to protect gold. Bitcoin uses electricity and computing power to protect digital money.
+
+<KeyTakeaway>
+**Proof-of-Work**: The computational effort required to add new blocks is what prevents fraud. The energy cost is the price of security without trusting any central authority.
+</KeyTakeaway>
+
+## How a Transaction Works (Step-by-Step)
+
+1. **You create a transaction**: "Send 0.01 BTC from my address to Alice's address"
+2. **You sign it** with your private key (proving you own the Bitcoin)
+3. **It broadcasts to the network**: Nodes receive and verify it follows the rules
+4. **It enters the mempool**: A waiting area for unconfirmed transactions
+5. **A miner includes it in a block**: Along with hundreds of other transactions
+6. **The miner solves the puzzle**: Proof-of-Work secures the block
+7. **The block is added to the blockchain**: Your transaction is now confirmed
+8. **More blocks build on top**: After 6 confirmations (~60 minutes), it's considered final
+
+## Compare to Softwar Concepts
+
+Softwar focuses on Proof-of-Work as imposing **physical costs** on cyber operations:
+
+- **Fundamentals View**: PoW secures transactions and prevents double-spending
+- **Softwar View**: PoW projects power through accumulated hash rate (computational effort)
+- **Connection**: The same mechanism that secures your payments also creates strategic significance at the nation-state level
+
+## Key Takeaways
+
+1. **The blockchain** is a shared, tamper-proof record of all transactions
+2. **Mining** creates new Bitcoin and secures the network through computation
+3. **Halving** cuts mining rewards in half every 4 years, enforcing scarcity
+4. **Nodes** store and enforce Bitcoin's rules without central authority
+5. **Proof-of-Work** makes attacking Bitcoin prohibitively expensive
+
+## Everyday Application
+
+**This Week**: Set up a Bitcoin wallet (even if you don't buy any). Understanding how to receive and send transactions makes everything more concrete.
+
+**Thought Exercise**: If you ran a Bitcoin node, you could verify transactions yourself without trusting anyone. What other areas of life would benefit from "don't trust, verify"?
+
+## Reflect
+
+1. Mining uses real electricity to create digital security. Does this trade-off make sense to you? Why or why not?
+
+2. If only 21 million Bitcoin will ever exist, and we're past the halfway point, what does this mean for future availability and value?
+
+## Glossary Terms
+
+- **Blockchain**: Chain of transaction records (blocks) shared across the network
+- **Mining**: Using computational power to secure the network and earn Bitcoin
+- **Halving**: Event every 4 years that cuts mining rewards in half
+- **Node**: Computer storing and validating the full Bitcoin blockchain
+- **Proof-of-Work**: Security mechanism requiring computational effort to add blocks

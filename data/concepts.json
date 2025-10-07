@@ -1,0 +1,99 @@
+[
+  {
+    "concept": "Power Projection Theory",
+    "chapters": [
+      {
+        "chapter": "executive-summary",
+        "anchors": ["#overview", "#core-thesis"]
+      },
+      {
+        "chapter": "ch1",
+        "anchors": ["#defining-power-projection", "#components-of-power-projection"]
+      }
+    ]
+  },
+  {
+    "concept": "Bitpower",
+    "chapters": [
+      {
+        "chapter": "executive-summary",
+        "anchors": ["#the-softwar-concept", "#strategic-considerations"]
+      }
+    ]
+  },
+  {
+    "concept": "Proof-of-Work",
+    "chapters": [
+      {
+        "chapter": "executive-summary",
+        "anchors": ["#core-thesis", "#the-softwar-concept"]
+      },
+      {
+        "chapter": "ch1",
+        "anchors": ["#enter-proof-of-work", "#the-physical-cost-gap"]
+      }
+    ]
+  },
+  {
+    "concept": "Softwar",
+    "chapters": [
+      {
+        "chapter": "executive-summary",
+        "anchors": ["#the-softwar-concept"]
+      }
+    ]
+  },
+  {
+    "concept": "Physical Cost",
+    "chapters": [
+      {
+        "chapter": "executive-summary",
+        "anchors": ["#core-thesis"]
+      },
+      {
+        "chapter": "ch1",
+        "anchors": ["#the-cyber-domain-challenge", "#enter-proof-of-work"]
+      }
+    ]
+  },
+  {
+    "concept": "Deterrence",
+    "chapters": [
+      {
+        "chapter": "executive-summary",
+        "anchors": ["#national-security-implications"]
+      },
+      {
+        "chapter": "ch1",
+        "anchors": ["#the-nuclear-age"]
+      }
+    ]
+  },
+  {
+    "concept": "Electro-Cyber Dome",
+    "chapters": [
+      {
+        "chapter": "executive-summary",
+        "anchors": ["#national-security-implications"]
+      }
+    ]
+  },
+  {
+    "concept": "Hash Rate",
+    "chapters": [
+      {
+        "chapter": "executive-summary",
+        "anchors": ["#strategic-considerations"]
+      }
+    ]
+  },
+  {
+    "concept": "Byzantine Generals Problem",
+    "chapters": [
+      {
+        "chapter": "executive-summary",
+        "anchors": ["#theoretical-framework"]
+      }
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "exec-bitpower",
+    "chapterId": "executive-summary",
+    "front": "What is 'Bitpower'?",
+    "back": "Bitpower refers to the strategic power projection capability derived from controlling or accumulating hash rate in Proof-of-Work systems, analogous to military or economic power projection.",
+    "tags": ["Bitpower", "Executive Summary", "core-concept"]
+  },
+  {
+    "id": "exec-softwar",
+    "chapterId": "executive-summary",
+    "front": "Define 'Softwar'",
+    "back": "Softwar is the projection of power through Proof-of-Work systems that impose real physical costs on cyber operations, bridging the gap between physical and digital domains.",
+    "tags": ["Softwar", "Executive Summary", "core-concept"]
+  },
+  {
+    "id": "exec-pow",
+    "chapterId": "executive-summary",
+    "front": "Why is Proof-of-Work strategically significant?",
+    "back": "Proof-of-Work imposes physical costs (energy, hardware) on cyber operations, creating scarcity and enabling deterrence mechanisms similar to kinetic military power.",
+    "tags": ["Proof-of-Work", "Executive Summary", "strategy"]
+  },
+  {
+    "id": "exec-electro-cyber-dome",
+    "chapterId": "executive-summary",
+    "front": "What is the 'Electro-Cyber Dome'?",
+    "back": "The Electro-Cyber Dome is a defensive perimeter established through accumulated hash power that protects a Proof-of-Work network from attack, similar to traditional military defensive systems.",
+    "tags": ["Electro-Cyber Dome", "Executive Summary", "defense"]
+  },
+  {
+    "id": "exec-physical-cost",
+    "chapterId": "executive-summary",
+    "front": "How does Bitcoin introduce physical cost into cyberspace?",
+    "back": "Bitcoin's Proof-of-Work requires continuous energy expenditure and hardware investment that cannot be copied or simulated, creating real-world resource constraints in digital operations.",
+    "tags": ["Physical Cost", "Executive Summary", "Bitcoin"]
+  },
+  {
+    "id": "ch1-power-projection",
+    "chapterId": "ch1",
+    "front": "What are the four components of power projection?",
+    "back": "Reach (distance of deployment), Persistence (sustainability over time), Cost (resource requirements), and Effectiveness (achievement of objectives).",
+    "tags": ["Power Projection", "Chapter 1", "theory"]
+  },
+  {
+    "id": "ch1-constantinople",
+    "chapterId": "ch1",
+    "front": "What strategic lesson does the Fall of Constantinople (1453) teach?",
+    "back": "Gunpowder weapons (Orban's cannons) fundamentally shifted power by making previously impregnable defensive fortifications vulnerable, demonstrating how new technology disrupts existing strategic balances.",
+    "tags": ["History", "Chapter 1", "gunpowder"]
+  },
+  {
+    "id": "ch1-clausewitz",
+    "chapterId": "ch1",
+    "front": "According to Clausewitz, what is war?",
+    "back": "War is the continuation of politics by other means—a principle extending to cyber operations where power projection serves strategic political objectives.",
+    "tags": ["Clausewitz", "Chapter 1", "theory"]
+  },
+  {
+    "id": "ch1-nuclear-deterrence",
+    "chapterId": "ch1",
+    "front": "How do nuclear weapons demonstrate power projection through deterrence?",
+    "back": "Nuclear weapons project power through credible threat rather than use, creating strategic stability via Mutual Assured Destruction and requiring adversaries to account for retaliation costs.",
+    "tags": ["Nuclear Weapons", "Chapter 1", "deterrence"]
+  },
+  {
+    "id": "ch1-cyber-challenge",
+    "chapterId": "ch1",
+    "front": "What is the 'physical cost gap' in cyberspace?",
+    "back": "Cyber operations traditionally lack physical constraints because code can be copied infinitely at near-zero cost, making traditional deterrence theories difficult to apply and creating strategic instability.",
+    "tags": ["Cyber Domain", "Chapter 1", "challenge"]
+  },
+  {
+    "id": "ch1-pow-solution",
+    "chapterId": "ch1",
+    "front": "How does Proof-of-Work address the cyber physical cost gap?",
+    "back": "PoW imposes energy expenditure, hardware investment, and time constraints that create objective, verifiable physical costs in cyber operations, enabling traditional strategic frameworks to apply.",
+    "tags": ["Proof-of-Work", "Chapter 1", "solution"]
+  }
+]
