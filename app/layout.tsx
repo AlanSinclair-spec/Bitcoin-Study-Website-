@@ -4,6 +4,8 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import { AskChatbot } from '@/components/ask-chatbot';
 import Link from 'next/link';
+import { AuthProvider } from '@/components/auth/AuthProvider';
+import { AuthButton } from '@/components/auth/AuthButton';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -36,6 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn(inter.className, inter.variable, 'min-h-screen bg-background antialiased')}>
+        <AuthProvider>
         <div className="relative flex min-h-screen flex-col">
           <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 animate-slide-in">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -51,30 +54,47 @@ export default function RootLayout({
                 </div>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden lg:flex items-center space-x-8">
-                  {["Bitcoin Basics", "Softwar", "Journal", "Flashcards", "Glossary"].map((item) => (
-                    <a
-                      key={item}
-                      href={`/${item.toLowerCase().replace(' ', '-') === 'bitcoin-basics' ? 'fundamentals' : item.toLowerCase().replace(' ', '-')}`}
-                      className="relative text-[#0F172A] hover:text-[#F7931A] transition-colors duration-200 group font-medium"
-                    >
-                      {item}
-                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#F7931A] transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                  ))}
-                </nav>
+                <div className="flex items-center gap-6">
+                  <nav className="hidden lg:flex items-center space-x-8">
+                    {["Bitcoin Basics", "Softwar", "Journal", "Flashcards", "Glossary"].map((item) => {
+                      const slug = item.toLowerCase().replace(' ', '-');
+                      let href = `/${slug}`;
+                      if (slug === 'bitcoin-basics') href = '/fundamentals';
+                      if (slug === 'softwar') href = '/learn';
+
+                      return (
+                        <a
+                          key={item}
+                          href={href}
+                          className="relative text-[#0F172A] hover:text-[#F7931A] transition-colors duration-200 group font-medium"
+                        >
+                          {item}
+                          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#F7931A] transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                      );
+                    })}
+                  </nav>
+                  <AuthButton />
+                </div>
 
                 {/* Mobile Navigation */}
                 <nav className="flex lg:hidden items-center space-x-4">
-                  {["Bitcoin Basics", "Softwar", "Journal", "Flashcards", "Glossary"].map((item) => (
-                    <a
-                      key={item}
-                      href={`/${item.toLowerCase().replace(' ', '-') === 'bitcoin-basics' ? 'fundamentals' : item.toLowerCase().replace(' ', '-')}`}
-                      className="text-sm text-[#0F172A] hover:text-[#F7931A] transition-colors duration-200 font-medium"
-                    >
-                      {item}
-                    </a>
-                  ))}
+                  {["Bitcoin Basics", "Softwar", "Journal", "Flashcards", "Glossary"].map((item) => {
+                    const slug = item.toLowerCase().replace(' ', '-');
+                    let href = `/${slug}`;
+                    if (slug === 'bitcoin-basics') href = '/fundamentals';
+                    if (slug === 'softwar') href = '/learn';
+
+                    return (
+                      <a
+                        key={item}
+                        href={href}
+                        className="text-sm text-[#0F172A] hover:text-[#F7931A] transition-colors duration-200 font-medium"
+                      >
+                        {item}
+                      </a>
+                    );
+                  })}
                 </nav>
               </div>
             </div>
@@ -107,6 +127,7 @@ export default function RootLayout({
             </div>
           </footer>
         </div>
+        </AuthProvider>
       </body>
     </html>
   );
