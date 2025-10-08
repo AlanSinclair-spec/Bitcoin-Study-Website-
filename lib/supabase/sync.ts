@@ -177,7 +177,8 @@ export class SupabaseSync {
             ref: l.ref,
             label: l.label,
           })) || [],
-          habitCompletions: {},
+          goalsChecked: e.goals_checked || [],
+          habits: e.habits || {},
           createdAt: e.created_at,
           updatedAt: e.updated_at,
         }));
