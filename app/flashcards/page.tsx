@@ -430,16 +430,16 @@ export default function FlashcardsPage() {
               <>
                 {/* Multiple Choice */}
                 {currentQuestion.type === 'multipleChoice' && currentQuestion.options && (
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     {currentQuestion.options.map((option, idx) => (
                       <Button
                         key={idx}
                         variant="outline"
-                        className="w-full justify-start text-left h-auto py-4"
+                        className="w-full justify-start text-left h-auto py-4 px-4 whitespace-normal min-h-[60px]"
                         onClick={() => handleSubmitAnswer(currentQuestion, option)}
                       >
-                        <span className="font-semibold mr-3">{String.fromCharCode(65 + idx)}.</span>
-                        {option}
+                        <span className="font-semibold mr-3 flex-shrink-0">{String.fromCharCode(65 + idx)}.</span>
+                        <span className="flex-1 break-words">{option}</span>
                       </Button>
                     ))}
                   </div>
@@ -493,39 +493,39 @@ export default function FlashcardsPage() {
             ) : (
               <>
                 {/* Answer Feedback */}
-                <div className={`p-6 rounded-lg ${currentQuestion.isCorrect ? 'bg-green-50 dark:bg-green-950' : 'bg-red-50 dark:bg-red-950'}`}>
+                <div className={`p-6 rounded-lg border-2 ${currentQuestion.isCorrect ? 'bg-green-50 border-green-200 dark:bg-green-950/30 dark:border-green-800' : 'bg-red-50 border-red-200 dark:bg-red-950/30 dark:border-red-800'}`}>
                   <div className="flex items-center gap-3 mb-4">
                     {currentQuestion.isCorrect ? (
-                      <div className="p-2 bg-green-100 dark:bg-green-900 rounded-full">
-                        <Check className="h-6 w-6 text-green-600" />
+                      <div className="p-2 bg-green-500 rounded-full">
+                        <Check className="h-6 w-6 text-white" />
                       </div>
                     ) : (
-                      <div className="p-2 bg-red-100 dark:bg-red-900 rounded-full">
-                        <X className="h-6 w-6 text-red-600" />
+                      <div className="p-2 bg-red-500 rounded-full">
+                        <X className="h-6 w-6 text-white" />
                       </div>
                     )}
                     <div>
-                      <h3 className="font-semibold text-lg">
+                      <h3 className={`font-bold text-xl ${currentQuestion.isCorrect ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400'}`}>
                         {currentQuestion.isCorrect ? 'Correct!' : 'Incorrect'}
                       </h3>
                       {currentQuestion.type === 'written' && currentQuestion.userAnswer && (
-                        <p className="text-sm text-muted-foreground">
+                        <p className={`text-sm ${currentQuestion.isCorrect ? 'text-green-600 dark:text-green-300' : 'text-red-600 dark:text-red-300'}`}>
                           {getGradeFeedback(calculateSimilarity(currentQuestion.userAnswer, currentQuestion.correctAnswer))}
                         </p>
                       )}
                     </div>
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     {currentQuestion.userAnswer && (
                       <div>
-                        <p className="text-sm font-medium">Your answer:</p>
-                        <p className="text-sm">{currentQuestion.userAnswer}</p>
+                        <p className={`text-sm font-semibold mb-1 ${currentQuestion.isCorrect ? 'text-green-800 dark:text-green-300' : 'text-red-800 dark:text-red-300'}`}>Your answer:</p>
+                        <p className={`text-base ${currentQuestion.isCorrect ? 'text-green-900 dark:text-green-100' : 'text-red-900 dark:text-red-100'}`}>{currentQuestion.userAnswer}</p>
                       </div>
                     )}
                     <div>
-                      <p className="text-sm font-medium">Correct answer:</p>
-                      <p className="text-sm font-semibold">{currentQuestion.correctAnswer}</p>
+                      <p className={`text-sm font-semibold mb-1 ${currentQuestion.isCorrect ? 'text-green-800 dark:text-green-300' : 'text-red-800 dark:text-red-300'}`}>Correct answer:</p>
+                      <p className={`text-base font-semibold ${currentQuestion.isCorrect ? 'text-green-900 dark:text-green-100' : 'text-red-900 dark:text-red-100'}`}>{currentQuestion.correctAnswer}</p>
                     </div>
                   </div>
                 </div>
