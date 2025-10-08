@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -12,12 +12,38 @@ import type { JournalEntry } from '@/lib/journal/types';
 
 export default function NewJournalEntry() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [tags, setTags] = useState<string[]>([]);
   const [tagInput, setTagInput] = useState('');
   const [rating, setRating] = useState<number>(3);
   const [showPrompts, setShowPrompts] = useState(false);
+
+  // Prefill from query parameters
+  useEffect(() => {
+    const lessonTitle = searchParams.get('title');
+    const lessonSlug = searchParams.get('lesson');
+
+    if (lessonTitle) {
+      setTitle(`Reflection: ${lessonTitle}`);
+    }
+
+    if (lessonSlug) {
+      const lessonPath = lessonSlug.includes('fundamentals')
+        ? `/fundamentals/${lessonSlug}`
+        : `/learn/${lessonSlug}`;
+
+      setContent(`**Related Lesson**: [${lessonTitle || lessonSlug}](${lessonPath})\n\n**My Key Takeaways**:\n\n\n\n**Questions I Still Have**:\n\n\n\n**How I Can Apply This**:\n\n`);
+
+      // Add relevant tag based on lesson type
+      if (lessonSlug.includes('fundamentals')) {
+        setTags(['bitcoin', 'fundamentals']);
+      } else {
+        setTags(['softwar', 'strategy']);
+      }
+    }
+  }, [searchParams]);
 
   async function handleSave() {
     if (!title || !content) {

@@ -6,14 +6,17 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import Link from 'next/link';
-import { Plus, TrendingUp, Target, Calendar, BookOpen } from 'lucide-react';
+import { Plus, TrendingUp, Target, Calendar, BookOpen, AlertCircle } from 'lucide-react';
 import { journalStorage } from '@/lib/journal/storage';
+import { progressStorage } from '@/lib/progress/storage';
 import type { JournalEntry, Goal, Habit, JournalStats } from '@/lib/journal/types';
+import type { WeakArea } from '@/lib/progress/storage';
 
 export default function JournalDashboard() {
   const [entries, setEntries] = useState<JournalEntry[]>([]);
   const [goals, setGoals] = useState<Goal[]>([]);
   const [habits, setHabits] = useState<Habit[]>([]);
+  const [weakAreas, setWeakAreas] = useState<WeakArea[]>([]);
   const [stats, setStats] = useState<JournalStats>({
     entriesThisWeek: 0,
     currentStreak: 0,
@@ -29,10 +32,14 @@ export default function JournalDashboard() {
   }, []);
 
   async function loadData() {
-    const [loadedEntries, loadedGoals, loadedHabits] = await Promise.all([
+    // Initialize sample entry if this is the first visit
+    await journalStorage.initializeSampleEntry();
+
+    const [loadedEntries, loadedGoals, loadedHabits, loadedWeakAreas] = await Promise.all([
       journalStorage.getEntries(),
       journalStorage.getGoals(),
       journalStorage.getHabits(),
+      progressStorage.getWeakAreas(3),
     ]);
 
     setEntries(loadedEntries.sort((a, b) =>
@@ -40,6 +47,7 @@ export default function JournalDashboard() {
     ));
     setGoals(loadedGoals.filter(g => g.status !== 'done'));
     setHabits(loadedHabits.filter(h => h.active));
+    setWeakAreas(loadedWeakAreas);
 
     // Calculate stats
     const now = new Date();
@@ -244,25 +252,41 @@ export default function JournalDashboard() {
             </CardContent>
           </Card>
 
-          {/* Weak Areas Nudge */}
+          {/* Weak Areas */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-sm">Focus Areas</CardTitle>
+              <CardTitle className="text-sm flex items-center gap-2">
+                <AlertCircle className="h-4 w-4 text-orange-500" />
+                Focus Areas
+              </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground mb-3">
-                Based on recent quiz scores, consider reviewing:
-              </p>
-              <div className="space-y-2">
-                <Badge variant="outline">Proof-of-Work</Badge>
-                <Badge variant="outline">Private Keys</Badge>
-                <Badge variant="outline">Deterrence</Badge>
-              </div>
-              <Link href="/journal/new">
-                <Button variant="outline" size="sm" className="w-full mt-4">
-                  Reflect on These
-                </Button>
-              </Link>
+              {weakAreas.length === 0 ? (
+                <p className="text-sm text-muted-foreground">
+                  Take some quizzes to identify areas for improvement
+                </p>
+              ) : (
+                <>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Based on recent quiz scores, review:
+                  </p>
+                  <div className="space-y-2">
+                    {weakAreas.map(area => (
+                      <div key={area.topic} className="flex items-center justify-between">
+                        <Badge variant="outline">{area.topic}</Badge>
+                        <span className="text-xs text-muted-foreground">
+                          {area.missCount} {area.missCount === 1 ? 'miss' : 'misses'}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link href="/flashcards">
+                    <Button variant="outline" size="sm" className="w-full mt-4">
+                      Review Flashcards
+                    </Button>
+                  </Link>
+                </>
+              )}
             </CardContent>
           </Card>
         </div>

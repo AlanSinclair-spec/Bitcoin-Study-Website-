@@ -108,7 +108,10 @@ export default async function FundamentalsLessonPage({ params }: { params: Promi
                   Review Flashcards
                 </Button>
               </Link>
-              <Link href="/journal/new" className="block">
+              <Link
+                href={`/journal/new?lesson=${lessonSlug}&title=${encodeURIComponent(frontmatter.title || '')}`}
+                className="block"
+              >
                 <Button variant="default" size="sm" className="w-full">
                   Reflect in Journal
                 </Button>

@@ -24,18 +24,21 @@ interface FlashCard {
 }
 
 export default function FlashcardsPage() {
+  const [allCards, setAllCards] = useState<FlashCard[]>([]);
   const [cards, setCards] = useState<FlashCard[]>([]);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [reviews, setReviews] = useState<Record<string, CardReview>>({});
   const [sessionComplete, setSessionComplete] = useState(false);
   const [cardsReviewed, setCardsReviewed] = useState(0);
+  const [filter, setFilter] = useState<'all' | 'fundamentals' | 'softwar'>('all');
 
   useEffect(() => {
     // Load flashcards
     fetch('/data/flashcards.json')
       .then((res) => res.json())
       .then((data: FlashCard[]) => {
+        setAllCards(data);
         setCards(data.slice(0, 20)); // Limit to 20 cards per session
       });
 
@@ -43,6 +46,30 @@ export default function FlashcardsPage() {
     const existingReviews = loadReviews();
     setReviews(existingReviews);
   }, []);
+
+  useEffect(() => {
+    // Filter cards when filter changes
+    let filtered = allCards;
+    if (filter === 'fundamentals') {
+      filtered = allCards.filter(card =>
+        card.chapterId.includes('fund') ||
+        card.id.includes('fund') ||
+        card.tags.some(tag => ['bitcoin', 'fundamentals', 'basics'].includes(tag.toLowerCase()))
+      );
+    } else if (filter === 'softwar') {
+      filtered = allCards.filter(card =>
+        card.chapterId.includes('ch') ||
+        card.chapterId.includes('exec') ||
+        card.id.includes('exec') ||
+        card.id.includes('ch') ||
+        card.tags.some(tag => ['softwar', 'power-projection', 'strategy'].includes(tag.toLowerCase()))
+      );
+    }
+    setCards(filtered.slice(0, 20));
+    setCurrentCardIndex(0);
+    setCardsReviewed(0);
+    setSessionComplete(false);
+  }, [filter, allCards]);
 
   const currentCard = cards[currentCardIndex];
   const stats = getReviewStats(Object.values(reviews));
@@ -131,6 +158,31 @@ export default function FlashcardsPage() {
   return (
     <div className="container py-10">
       <div className="mx-auto max-w-2xl">
+        {/* Filter Buttons */}
+        <div className="mb-6 flex gap-2">
+          <Button
+            variant={filter === 'all' ? 'default' : 'outline'}
+            size="sm"
+            onClick={() => setFilter('all')}
+          >
+            All Cards ({allCards.length})
+          </Button>
+          <Button
+            variant={filter === 'fundamentals' ? 'default' : 'outline'}
+            size="sm"
+            onClick={() => setFilter('fundamentals')}
+          >
+            Bitcoin Basics
+          </Button>
+          <Button
+            variant={filter === 'softwar' ? 'default' : 'outline'}
+            size="sm"
+            onClick={() => setFilter('softwar')}
+          >
+            Softwar Strategy
+          </Button>
+        </div>
+
         <div className="mb-6">
           <div className="flex justify-between text-sm text-muted-foreground mb-2">
             <span>

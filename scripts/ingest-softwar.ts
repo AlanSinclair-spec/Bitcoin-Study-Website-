@@ -85,7 +85,8 @@ const CORE_CONCEPTS = [
 
 async function extractTextFromPDF(pdfPath: string): Promise<{ pages: string[]; fullText: string }> {
   const pdfBuffer = fs.readFileSync(pdfPath);
-  const loadingTask = getDocument({ data: pdfBuffer });
+  const pdfData = new Uint8Array(pdfBuffer);
+  const loadingTask = getDocument({ data: pdfData });
   const pdfDoc = await loadingTask.promise;
 
   const pages: string[] = [];

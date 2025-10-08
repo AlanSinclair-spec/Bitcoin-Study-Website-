@@ -2,12 +2,24 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
+import { AskChatbot } from '@/components/ask-chatbot';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
-  title: 'Softwar Learning Platform',
-  description: 'Learn the complete content of Softwar: A Novel Theory on Power Projection and Bitcoin',
+  title: 'Softwar Learning Platform - Master Bitcoin & Power Projection Theory',
+  description: 'Learn Bitcoin from the ground up and explore Softwar\'s strategic insights on power projection, proof-of-work, and national security. Interactive lessons, quizzes, and flashcards.',
+  keywords: ['Bitcoin', 'Softwar', 'Power Projection', 'Cryptocurrency', 'Strategy', 'Learning Platform'],
+  authors: [{ name: 'Based on Softwar by Jason P. Lowery' }],
+  openGraph: {
+    title: 'Softwar Learning Platform',
+    description: 'Master Bitcoin & Strategic Power Theory',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
@@ -17,56 +29,80 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.className, 'min-h-screen bg-background antialiased')}>
+      <body className={cn(inter.className, inter.variable, 'min-h-screen bg-background antialiased')}>
         <div className="relative flex min-h-screen flex-col">
-          <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <div className="container flex h-14 items-center">
-              <div className="mr-4 flex">
-                <a className="mr-6 flex items-center space-x-2" href="/">
-                  <span className="font-bold">Softwar Learning</span>
+          <header className="sticky top-0 z-50 w-full border-b glass animate-slide-in">
+            <div className="container flex h-16 items-center">
+              <div className="mr-8 flex">
+                <a
+                  className="mr-8 flex items-center space-x-2 group transition-all"
+                  href="/"
+                >
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm group-hover:scale-110 transition-transform">
+                    S
+                  </div>
+                  <span className="font-bold text-lg gradient-text">Softwar Learning</span>
                 </a>
-                <nav className="flex items-center space-x-6 text-sm font-medium">
-                  <a href="/fundamentals" className="transition-colors hover:text-foreground/80">
+                <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
+                  <a
+                    href="/fundamentals"
+                    className="transition-all hover:text-primary relative after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                  >
                     Bitcoin Basics
                   </a>
-                  <a href="/learn" className="transition-colors hover:text-foreground/80">
+                  <a
+                    href="/learn"
+                    className="transition-all hover:text-primary relative after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                  >
                     Softwar
                   </a>
-                  <a href="/journal" className="transition-colors hover:text-foreground/80">
+                  <a
+                    href="/journal"
+                    className="transition-all hover:text-primary relative after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                  >
                     Journal
                   </a>
-                  <a href="/flashcards" className="transition-colors hover:text-foreground/80">
+                  <a
+                    href="/flashcards"
+                    className="transition-all hover:text-primary relative after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                  >
                     Flashcards
                   </a>
-                  <a href="/glossary" className="transition-colors hover:text-foreground/80">
+                  <a
+                    href="/glossary"
+                    className="transition-all hover:text-primary relative after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                  >
                     Glossary
-                  </a>
-                  <a href="/search" className="transition-colors hover:text-foreground/80">
-                    Search
                   </a>
                 </nav>
               </div>
             </div>
           </header>
           <main className="flex-1">{children}</main>
-          <footer className="border-t py-6 md:py-0">
-            <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-              <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-                Based on{' '}
-                <a
-                  href="/sources"
-                  className="font-medium underline underline-offset-4"
-                >
-                  Softwar by Jason P. Lowery
-                </a>
-                {' • '}
-                <a
-                  href="/sources"
-                  className="font-medium underline underline-offset-4"
-                >
-                  CC BY 4.0
-                </a>
-              </p>
+          <AskChatbot />
+          <footer className="border-t py-8 md:py-12 bg-muted/30">
+            <div className="container">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="flex flex-col items-center md:items-start gap-2">
+                  <p className="text-sm font-medium">
+                    Based on Softwar by Jason P. Lowery
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    Educational platform • CC BY 4.0 License
+                  </p>
+                </div>
+                <div className="flex items-center gap-6 text-sm text-muted-foreground">
+                  <a href="/sources" className="hover:text-primary transition-colors">
+                    Sources
+                  </a>
+                  <a href="/about" className="hover:text-primary transition-colors">
+                    About
+                  </a>
+                  <a href="/glossary" className="hover:text-primary transition-colors">
+                    Glossary
+                  </a>
+                </div>
+              </div>
             </div>
           </footer>
         </div>

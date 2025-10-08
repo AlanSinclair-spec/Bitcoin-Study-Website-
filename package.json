@@ -22,6 +22,7 @@
   "description": "",
   "dependencies": {
     "@prisma/client": "^6.17.0",
+    "@tailwindcss/postcss": "^4.1.14",
     "@tailwindcss/typography": "^0.5.19",
     "@types/lunr": "^2.3.7",
     "@types/node": "^24.7.0",
@@ -40,6 +41,7 @@
     "prisma": "^6.17.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-markdown": "^10.1.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.14",
     "typescript": "^5.9.3",

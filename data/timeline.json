@@ -2,73 +2,31 @@
   {
     "year": 1453,
     "label": "Fall of Constantinople",
-    "sourceSection": "Chapter 1",
-    "description": "Orban's cannons breach previously impregnable walls, demonstrating how gunpowder weapons fundamentally shifted offensive/defensive power balance"
+    "sourceSection": "Historical Context",
+    "description": "Gunpowder weapons changed siege warfare"
   },
   {
     "year": 1832,
-    "label": "Clausewitz's 'On War' Published",
-    "sourceSection": "Chapter 1",
-    "description": "Established foundational theory: 'War is the continuation of politics by other means'"
+    "label": "Clausewitz On War published",
+    "sourceSection": "Theoretical Framework",
+    "description": "War as extension of politics"
   },
   {
     "year": 1945,
-    "label": "First Nuclear Weapons Used",
-    "sourceSection": "Chapter 1",
-    "description": "Atomic bombs on Hiroshima and Nagasaki demonstrated ultimate kinetic power and introduced deterrence as strategic doctrine"
-  },
-  {
-    "year": 1962,
-    "label": "Cuban Missile Crisis",
-    "sourceSection": "Chapter 1",
-    "description": "Mutual Assured Destruction (MAD) doctrine tested; demonstrated nuclear deterrence dynamics"
-  },
-  {
-    "year": 1982,
-    "label": "Byzantine Generals Problem",
-    "sourceSection": "Chapter 2",
-    "description": "Lamport, Shostak, and Pease formalize the distributed consensus problem in the presence of adversaries"
+    "label": "Nuclear weapons used",
+    "sourceSection": "Power Projection History",
+    "description": "Ultimate kinetic deterrence"
   },
   {
     "year": 2008,
-    "label": "Bitcoin Whitepaper Published",
-    "sourceSection": "Executive Summary",
-    "description": "Satoshi Nakamoto introduces Proof-of-Work solution to Byzantine Generals Problem"
+    "label": "Bitcoin whitepaper",
+    "sourceSection": "Chapter 1",
+    "description": "Introduction of Proof-of-Work consensus"
   },
   {
     "year": 2009,
     "label": "Bitcoin Genesis Block",
-    "sourceSection": "Chapter 2",
-    "description": "First block mined, establishing the foundation for Bitcoin's Proof-of-Work chain"
-  },
-  {
-    "year": 2013,
-    "label": "Bitcoin Hash Rate Exceeds 1 PH/s",
-    "sourceSection": "Chapter 3",
-    "description": "Network hash rate milestone demonstrating growing physical commitment to Bitcoin security"
-  },
-  {
-    "year": 2017,
-    "label": "China's Mining Dominance Peak",
-    "sourceSection": "Chapter 4",
-    "description": "Over 70% of Bitcoin hash rate concentrated in China, raising strategic concerns"
-  },
-  {
-    "year": 2021,
-    "label": "China Mining Ban",
-    "sourceSection": "Chapter 4",
-    "description": "China bans Bitcoin mining; hash rate migrates demonstrating network resilience and geopolitical dynamics"
-  },
-  {
-    "year": 2021,
-    "label": "El Salvador Adopts Bitcoin",
-    "sourceSection": "Chapter 5",
-    "description": "First nation-state to adopt Bitcoin as legal tender, testing strategic adoption thesis"
-  },
-  {
-    "year": 2023,
-    "label": "Bitcoin Hash Rate Exceeds 400 EH/s",
-    "sourceSection": "Chapter 6",
-    "description": "Network security reaches unprecedented levels, representing massive physical capital investment"
+    "sourceSection": "Chapter 1",
+    "description": "First block mined"
   }
 ]
