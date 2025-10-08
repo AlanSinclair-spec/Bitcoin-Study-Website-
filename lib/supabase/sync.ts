@@ -64,7 +64,6 @@ export class SupabaseSync {
           status: goal.status,
           target_date: goal.targetDate,
           created_at: goal.createdAt,
-          updated_at: goal.updatedAt,
         }));
 
         await supabase
@@ -98,8 +97,8 @@ export class SupabaseSync {
           quiz_score: p.quizScore,
           quiz_attempts: p.quizAttempts,
           completed_at: p.completedAt,
-          created_at: p.createdAt,
-          updated_at: p.updatedAt,
+          created_at: p.createdAt || new Date().toISOString(),
+          updated_at: p.updatedAt || new Date().toISOString(),
         }));
 
         await supabase
@@ -115,8 +114,8 @@ export class SupabaseSync {
           miss_count: wa.missCount,
           related_lessons: wa.relatedLessons,
           suggested_flashcards: wa.suggestedFlashcards,
-          created_at: wa.createdAt,
-          updated_at: wa.updatedAt,
+          created_at: wa.createdAt || new Date().toISOString(),
+          updated_at: wa.updatedAt || new Date().toISOString(),
         }));
 
         await supabase
