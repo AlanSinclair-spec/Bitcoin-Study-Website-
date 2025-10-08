@@ -84,17 +84,25 @@ export function AskChatbot() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 w-96 max-h-[600px] flex flex-col rounded-lg shadow-2xl" style={{ 
-      backgroundColor: 'white !important', 
-      border: '2px solid #e5e7eb',
-      backdropFilter: 'none',
-      background: 'white'
-    }}>
+    <div
+      className="fixed bottom-6 right-6 z-50 w-96 max-h-[600px] flex flex-col rounded-lg shadow-2xl"
+      style={{
+        backgroundColor: '#ffffff',
+        background: '#ffffff',
+        opacity: 1,
+        border: '2px solid #e5e7eb',
+        backdropFilter: 'none',
+        WebkitBackdropFilter: 'none',
+      }}
+    >
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b">
+      <div
+        className="flex items-center justify-between p-4 border-b"
+        style={{ backgroundColor: '#ffffff', background: '#ffffff' }}
+      >
         <div className="flex items-center gap-2">
           <MessageCircle className="h-5 w-5 text-primary" />
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">Ask Me Anything</h3>
+          <h3 className="font-semibold" style={{ color: '#111827' }}>Ask Me Anything</h3>
         </div>
         <div className="flex gap-2">
           <Button size="sm" variant="ghost" onClick={clearChat}>
@@ -107,14 +115,24 @@ export function AskChatbot() {
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 min-h-[300px]" style={{ backgroundColor: 'white' }}>
+      <div
+        className="flex-1 overflow-y-auto p-4 space-y-4 min-h-[300px]"
+        style={{ backgroundColor: '#ffffff', background: '#ffffff', opacity: 1 }}
+      >
         {messages.map((msg, idx) => (
           <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-            <div className={`max-w-[80%] rounded-lg p-3 ${
-              msg.role === 'user'
-                ? 'bg-primary text-primary-foreground'
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100'
-            }`} style={{ backgroundColor: msg.role === 'user' ? undefined : '#f3f4f6' }}>
+            <div
+              className={`max-w-[80%] rounded-lg p-3 ${
+                msg.role === 'user'
+                  ? 'bg-primary text-primary-foreground'
+                  : ''
+              }`}
+              style={
+                msg.role === 'user'
+                  ? {}
+                  : { backgroundColor: '#f3f4f6', background: '#f3f4f6', color: '#111827' }
+              }
+            >
               <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
               {msg.relatedLessons && msg.relatedLessons.length > 0 && (
                 <div className="mt-2 pt-2 border-t border-border/50">
@@ -136,7 +154,10 @@ export function AskChatbot() {
 
         {isThinking && (
           <div className="flex justify-start">
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-3">
+            <div
+              className="rounded-lg p-3"
+              style={{ backgroundColor: '#f3f4f6', background: '#f3f4f6' }}
+            >
               <div className="flex gap-1">
                 <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
                 <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
@@ -149,14 +170,23 @@ export function AskChatbot() {
 
       {/* Suggestions */}
       {messages.length <= 2 && (
-        <div className="p-4 border-t" style={{ backgroundColor: 'white' }}>
-          <p className="text-xs font-medium mb-2 text-gray-700 dark:text-gray-300">Try asking:</p>
+        <div
+          className="p-4 border-t"
+          style={{ backgroundColor: '#ffffff', background: '#ffffff' }}
+        >
+          <p className="text-xs font-medium mb-2" style={{ color: '#374151' }}>Try asking:</p>
           <div className="flex flex-wrap gap-2">
             {suggestedQuestions.slice(0, 3).map((q, idx) => (
               <button
                 key={idx}
                 onClick={() => handleSuggestion(q)}
-                className="text-xs px-2 py-1 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors text-gray-800 dark:text-gray-200"
+                className="text-xs px-2 py-1 border rounded-md transition-colors"
+                style={{
+                  backgroundColor: '#ffffff',
+                  background: '#ffffff',
+                  borderColor: '#e5e7eb',
+                  color: '#1f2937',
+                }}
               >
                 {q}
               </button>
@@ -166,7 +196,10 @@ export function AskChatbot() {
       )}
 
       {/* Input */}
-      <div className="p-4 border-t" style={{ backgroundColor: 'white' }}>
+      <div
+        className="p-4 border-t"
+        style={{ backgroundColor: '#ffffff', background: '#ffffff' }}
+      >
         <form onSubmit={(e) => { e.preventDefault(); handleSend(); }} className="flex gap-2">
           <Input
             value={input}
