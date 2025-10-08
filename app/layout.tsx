@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
-import { AskChatbot } from '@/components/ask-chatbot';
 import Link from 'next/link';
 import { AuthProvider } from '@/components/auth/AuthProvider';
 import { AuthButton } from '@/components/auth/AuthButton';
@@ -100,7 +99,6 @@ export default function RootLayout({
             </div>
           </header>
           <main className="flex-1">{children}</main>
-          <AskChatbot />
           <footer className="border-t py-8 md:py-12 bg-muted/30">
             <div className="container">
               <div className="flex flex-col md:flex-row items-center justify-between gap-6">
