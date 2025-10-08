@@ -36,8 +36,14 @@ class ProgressStorage {
    */
   async getProgress(): Promise<LessonProgress[]> {
     if (typeof window === 'undefined') return [];
-    const data = localStorage.getItem(this.STORAGE_KEY);
-    return data ? JSON.parse(data) : [];
+    try {
+      const data = localStorage.getItem(this.STORAGE_KEY);
+      return data ? JSON.parse(data) : [];
+    } catch (error) {
+      console.error('Failed to parse progress data, resetting:', error);
+      localStorage.removeItem(this.STORAGE_KEY);
+      return [];
+    }
   }
 
   /**
@@ -155,15 +161,21 @@ class ProgressStorage {
   async getWeakAreas(limit: number = 3): Promise<WeakArea[]> {
     if (typeof window === 'undefined') return [];
 
-    const data = localStorage.getItem(this.WEAK_AREAS_KEY);
-    if (!data) return [];
+    try {
+      const data = localStorage.getItem(this.WEAK_AREAS_KEY);
+      if (!data) return [];
 
-    const weakAreas: Record<string, WeakArea> = JSON.parse(data);
-    const sorted = Object.values(weakAreas)
-      .sort((a, b) => b.missCount - a.missCount)
-      .slice(0, limit);
+      const weakAreas: Record<string, WeakArea> = JSON.parse(data);
+      const sorted = Object.values(weakAreas)
+        .sort((a, b) => b.missCount - a.missCount)
+        .slice(0, limit);
 
-    return sorted;
+      return sorted;
+    } catch (error) {
+      console.error('Failed to parse weak areas data, resetting:', error);
+      localStorage.removeItem(this.WEAK_AREAS_KEY);
+      return [];
+    }
   }
 
   /**

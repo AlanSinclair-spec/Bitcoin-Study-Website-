@@ -12,8 +12,14 @@ export class LocalJournalStorage {
   // Entries
   async getEntries(): Promise<JournalEntry[]> {
     if (typeof window === 'undefined') return [];
-    const data = localStorage.getItem(STORAGE_KEYS.ENTRIES);
-    return data ? JSON.parse(data) : [];
+    try {
+      const data = localStorage.getItem(STORAGE_KEYS.ENTRIES);
+      return data ? JSON.parse(data) : [];
+    } catch (error) {
+      console.error('Failed to parse journal entries, resetting:', error);
+      localStorage.removeItem(STORAGE_KEYS.ENTRIES);
+      return [];
+    }
   }
 
   async getEntry(id: string): Promise<JournalEntry | null> {
@@ -41,8 +47,14 @@ export class LocalJournalStorage {
   // Goals
   async getGoals(): Promise<Goal[]> {
     if (typeof window === 'undefined') return [];
-    const data = localStorage.getItem(STORAGE_KEYS.GOALS);
-    return data ? JSON.parse(data) : [];
+    try {
+      const data = localStorage.getItem(STORAGE_KEYS.GOALS);
+      return data ? JSON.parse(data) : [];
+    } catch (error) {
+      console.error('Failed to parse goals, resetting:', error);
+      localStorage.removeItem(STORAGE_KEYS.GOALS);
+      return [];
+    }
   }
 
   async saveGoal(goal: Goal): Promise<void> {
@@ -65,8 +77,14 @@ export class LocalJournalStorage {
   // Habits
   async getHabits(): Promise<Habit[]> {
     if (typeof window === 'undefined') return [];
-    const data = localStorage.getItem(STORAGE_KEYS.HABITS);
-    return data ? JSON.parse(data) : [];
+    try {
+      const data = localStorage.getItem(STORAGE_KEYS.HABITS);
+      return data ? JSON.parse(data) : [];
+    } catch (error) {
+      console.error('Failed to parse habits, resetting:', error);
+      localStorage.removeItem(STORAGE_KEYS.HABITS);
+      return [];
+    }
   }
 
   async saveHabit(habit: Habit): Promise<void> {
