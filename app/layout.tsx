@@ -50,7 +50,7 @@ export default function RootLayout({
                   </Link>
                 </div>
 
-                {/* Navigation */}
+                {/* Desktop Navigation */}
                 <nav className="hidden lg:flex items-center space-x-8">
                   {["Bitcoin Basics", "Softwar", "Journal", "Flashcards", "Glossary"].map((item) => (
                     <a
@@ -60,6 +60,19 @@ export default function RootLayout({
                     >
                       {item}
                       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#F7931A] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                  ))}
+                </nav>
+
+                {/* Mobile Navigation */}
+                <nav className="flex lg:hidden items-center space-x-4">
+                  {["Bitcoin Basics", "Softwar", "Journal", "Flashcards", "Glossary"].map((item) => (
+                    <a
+                      key={item}
+                      href={`/${item.toLowerCase().replace(' ', '-') === 'bitcoin-basics' ? 'fundamentals' : item.toLowerCase().replace(' ', '-')}`}
+                      className="text-sm text-[#0F172A] hover:text-[#F7931A] transition-colors duration-200 font-medium"
+                    >
+                      {item}
                     </a>
                   ))}
                 </nav>
