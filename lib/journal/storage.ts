@@ -174,7 +174,11 @@ When explaining Bitcoin to friends, I can use the analogy of "digital walls" - j
 
 I want to run a Bitcoin node to better understand how network validation works in practice.`,
         tags: ['bitcoin', 'proof-of-work', 'fundamentals'],
-        links: ['/fundamentals/2-how-bitcoin-works'],
+        links: [{
+          type: 'lesson',
+          ref: '/fundamentals/2-how-bitcoin-works',
+          label: 'How Bitcoin Works'
+        }],
         goalsChecked: [],
         habits: {},
         rating: 4,

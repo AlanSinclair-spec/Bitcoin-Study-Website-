@@ -192,7 +192,7 @@ export default function JournalEntryPage({ params }: { params: Promise<{ id: str
                 <h3 className="text-sm font-semibold mb-2">Related Lessons</h3>
                 <div className="space-y-1">
                   {entry.links.map((link, idx) => (
-                    <Link key={idx} href={link.url} className="block text-sm text-primary hover:underline">
+                    <Link key={idx} href={link.ref} className="block text-sm text-primary hover:underline">
                       → {link.label}
                     </Link>
                   ))}

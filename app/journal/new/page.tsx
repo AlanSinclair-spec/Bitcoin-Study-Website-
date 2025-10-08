@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -10,7 +10,7 @@ import { journalStorage } from '@/lib/journal/storage';
 import { REFLECTION_PROMPTS } from '@/lib/journal/prompts';
 import type { JournalEntry } from '@/lib/journal/types';
 
-export default function NewJournalEntry() {
+function NewJournalEntryForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [title, setTitle] = useState('');
@@ -202,5 +202,13 @@ export default function NewJournalEntry() {
         </Card>
       </div>
     </div>
+  );
+}
+
+export default function NewJournalEntry() {
+  return (
+    <Suspense fallback={<div className="container py-10"><div className="mx-auto max-w-4xl">Loading...</div></div>}>
+      <NewJournalEntryForm />
+    </Suspense>
   );
 }

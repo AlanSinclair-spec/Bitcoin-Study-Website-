@@ -20,7 +20,7 @@ export default function FundamentalsPage() {
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-4">Bitcoin Fundamentals</h1>
           <p className="text-lg text-muted-foreground mb-6">
-            Master the essentials of Bitcoin technology, economics, and real-world use. Start here if you're new to Bitcoin, then explore Softwar for strategic insights.
+            Master the essentials of Bitcoin technology, economics, and real-world use. Start here if you&apos;re new to Bitcoin, then explore Softwar for strategic insights.
           </p>
           <div className="space-y-2">
             <div className="flex justify-between text-sm text-muted-foreground">
@@ -59,8 +59,8 @@ export default function FundamentalsPage() {
           <ul className="space-y-1 text-sm text-muted-foreground">
             <li>• <strong>New to Bitcoin?</strong> Start with Lesson 1 and work through in order</li>
             <li>• <strong>Have Bitcoin basics?</strong> Skip to Lesson 3 (Economics) or Lesson 6 (Future)</li>
-            <li>• <strong>Ready for strategy?</strong> Head to the Softwar section to understand Bitcoin's strategic significance</li>
-            <li>• <strong>Want to apply?</strong> Use the Journal to reflect on what you're learning</li>
+            <li>• <strong>Ready for strategy?</strong> Head to the Softwar section to understand Bitcoin&apos;s strategic significance</li>
+            <li>• <strong>Want to apply?</strong> Use the Journal to reflect on what you&apos;re learning</li>
           </ul>
         </div>
       </div>

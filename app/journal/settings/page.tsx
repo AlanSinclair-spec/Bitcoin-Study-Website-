@@ -62,7 +62,7 @@ export default function JournalSettingsPage() {
 
     const updated = {
       ...goal,
-      status: goal.status === 'completed' ? 'active' : 'completed' as 'active' | 'completed',
+      status: goal.status === 'done' ? 'active' : 'done' as 'active' | 'paused' | 'done',
     };
 
     await storage.saveGoal(updated);
@@ -77,6 +77,7 @@ export default function JournalSettingsPage() {
       label: newHabit.label,
       cadence: newHabit.cadence,
       active: true,
+      createdAt: new Date().toISOString(),
     };
 
     await storage.saveHabit(habit);
@@ -222,7 +223,7 @@ export default function JournalSettingsPage() {
             )}
 
             {goals.length === 0 && !showAddGoal && (
-              <p className="text-sm text-muted-foreground">No goals yet. Click "Add Goal" to create one.</p>
+              <p className="text-sm text-muted-foreground">No goals yet. Click &quot;Add Goal&quot; to create one.</p>
             )}
 
             {goals.map((goal) => (
@@ -234,14 +235,14 @@ export default function JournalSettingsPage() {
                     <p className="text-xs text-muted-foreground mt-1">Target: {new Date(goal.targetDate).toLocaleDateString()}</p>
                   )}
                   <p className="text-xs mt-1">
-                    <span className={goal.status === 'completed' ? 'text-green-600' : 'text-orange-600'}>
-                      {goal.status === 'completed' ? '✓ Completed' : '○ Active'}
+                    <span className={goal.status === 'done' ? 'text-green-600' : 'text-orange-600'}>
+                      {goal.status === 'done' ? '✓ Done' : goal.status === 'paused' ? '⏸ Paused' : '○ Active'}
                     </span>
                   </p>
                 </div>
                 <div className="flex gap-2">
                   <Button size="sm" variant="outline" onClick={() => toggleGoalStatus(goal.id)}>
-                    {goal.status === 'completed' ? 'Reopen' : 'Complete'}
+                    {goal.status === 'done' ? 'Reopen' : 'Mark Done'}
                   </Button>
                   <Button size="sm" variant="destructive" onClick={() => deleteGoal(goal.id)}>
                     <Trash2 className="h-4 w-4" />
@@ -292,7 +293,7 @@ export default function JournalSettingsPage() {
             )}
 
             {habits.length === 0 && !showAddHabit && (
-              <p className="text-sm text-muted-foreground">No habits yet. Click "Add Habit" to create one.</p>
+              <p className="text-sm text-muted-foreground">No habits yet. Click &quot;Add Habit&quot; to create one.</p>
             )}
 
             {habits.map((habit) => (

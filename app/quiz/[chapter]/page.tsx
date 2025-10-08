@@ -18,7 +18,7 @@ interface QuizQuestion {
   section: string;
 }
 
-export default function QuizPage({ params }: { params: { chapter: string } }) {
+export default function QuizPage({ params }: { params: Promise<{ chapter: string }> }) {
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string>('');
@@ -26,16 +26,22 @@ export default function QuizPage({ params }: { params: { chapter: string } }) {
   const [showExplanation, setShowExplanation] = useState(false);
   const [quizComplete, setQuizComplete] = useState(false);
   const [score, setScore] = useState(0);
+  const [chapter, setChapter] = useState<string>('');
 
   useEffect(() => {
+    params.then((p) => setChapter(p.chapter));
+  }, [params]);
+
+  useEffect(() => {
+    if (!chapter) return;
     // Load quiz questions for this chapter
     fetch('/data/quizzes.json')
       .then((res) => res.json())
       .then((data: QuizQuestion[]) => {
-        const chapterQuestions = data.filter((q) => q.chapterId === params.chapter);
+        const chapterQuestions = data.filter((q) => q.chapterId === chapter);
         setQuestions(chapterQuestions);
       });
-  }, [params.chapter]);
+  }, [chapter]);
 
   const currentQuestion = questions[currentQuestionIndex];
 
@@ -91,7 +97,7 @@ export default function QuizPage({ params }: { params: { chapter: string } }) {
           <Card>
             <CardHeader>
               <CardTitle>Quiz Complete!</CardTitle>
-              <CardDescription>Here's how you did</CardDescription>
+              <CardDescription>Here&apos;s how you did</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="text-center">

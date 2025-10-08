@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { AskChatbot } from '@/components/ask-chatbot';
+import Link from 'next/link';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -36,12 +37,12 @@ export default function RootLayout({
               <div className="flex h-16 items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center space-x-3">
-                  <a href="/" className="flex items-center space-x-3 group">
+                  <Link href="/" className="flex items-center space-x-3 group">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-[#F7931A] to-[#FDB931] transform group-hover:scale-110 transition-transform duration-200">
                       <span className="font-bold text-white">S</span>
                     </div>
                     <span className="text-xl font-semibold text-[#0F172A]">Softwar Learning</span>
-                  </a>
+                  </Link>
                 </div>
 
                 {/* Navigation */}
