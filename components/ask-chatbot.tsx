@@ -84,7 +84,12 @@ export function AskChatbot() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 w-96 max-h-[600px] flex flex-col bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-700 rounded-lg shadow-2xl" style={{ backgroundColor: 'white' }}>
+    <div className="fixed bottom-6 right-6 z-50 w-96 max-h-[600px] flex flex-col rounded-lg shadow-2xl" style={{ 
+      backgroundColor: 'white !important', 
+      border: '2px solid #e5e7eb',
+      backdropFilter: 'none',
+      background: 'white'
+    }}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b">
         <div className="flex items-center gap-2">
@@ -102,7 +107,7 @@ export function AskChatbot() {
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 min-h-[300px]">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 min-h-[300px]" style={{ backgroundColor: 'white' }}>
         {messages.map((msg, idx) => (
           <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div className={`max-w-[80%] rounded-lg p-3 ${
@@ -144,7 +149,7 @@ export function AskChatbot() {
 
       {/* Suggestions */}
       {messages.length <= 2 && (
-        <div className="p-4 border-t bg-gray-50 dark:bg-gray-800">
+        <div className="p-4 border-t" style={{ backgroundColor: 'white' }}>
           <p className="text-xs font-medium mb-2 text-gray-700 dark:text-gray-300">Try asking:</p>
           <div className="flex flex-wrap gap-2">
             {suggestedQuestions.slice(0, 3).map((q, idx) => (
@@ -161,7 +166,7 @@ export function AskChatbot() {
       )}
 
       {/* Input */}
-      <div className="p-4 border-t">
+      <div className="p-4 border-t" style={{ backgroundColor: 'white' }}>
         <form onSubmit={(e) => { e.preventDefault(); handleSend(); }} className="flex gap-2">
           <Input
             value={input}
