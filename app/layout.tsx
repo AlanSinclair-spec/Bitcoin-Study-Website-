@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   description: 'Learn Bitcoin from the ground up and explore Softwar\'s strategic insights on power projection, proof-of-work, and national security. Interactive lessons, quizzes, and flashcards.',
   keywords: ['Bitcoin', 'Softwar', 'Power Projection', 'Cryptocurrency', 'Strategy', 'Learning Platform'],
   authors: [{ name: 'Based on Softwar by Jason P. Lowery' }],
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: 'Softwar Learning Platform',
     description: 'Master Bitcoin & Strategic Power Theory',

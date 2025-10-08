@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useEffect, useState } from 'react';
+import { use, useEffect, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -25,11 +25,7 @@ export default function JournalEntryPage({ params }: { params: Promise<{ id: str
   const [editTags, setEditTags] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    loadEntry();
-  }, [id]);
-
-  async function loadEntry() {
+  const loadEntry = useCallback(async () => {
     const entries = await storage.getEntries();
     const found = entries.find(e => e.id === id);
     if (found) {
@@ -39,7 +35,11 @@ export default function JournalEntryPage({ params }: { params: Promise<{ id: str
       setEditTags(found.tags);
     }
     setLoading(false);
-  }
+  }, [id]);
+
+  useEffect(() => {
+    loadEntry();
+  }, [loadEntry]);
 
   async function handleSave() {
     if (!entry) return;

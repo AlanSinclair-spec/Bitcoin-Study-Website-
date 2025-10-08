@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -27,11 +27,7 @@ export default function JournalDashboard() {
     habitCompletionRate: 0,
   });
 
-  useEffect(() => {
-    loadData();
-  }, []);
-
-  async function loadData() {
+  const loadData = useCallback(async () => {
     // Initialize sample entry if this is the first visit
     await journalStorage.initializeSampleEntry();
 
@@ -75,7 +71,11 @@ export default function JournalDashboard() {
       goalsCompleted: loadedGoals.filter(g => g.status === 'done').length,
       habitCompletionRate: calculateHabitCompletion(loadedEntries, loadedHabits),
     });
-  }
+  }, []);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
 
   function calculateStreak(entries: JournalEntry[]): number {
     if (entries.length === 0) return 0;

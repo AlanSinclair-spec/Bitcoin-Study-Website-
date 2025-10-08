@@ -35,7 +35,7 @@ export default function FlashcardsPage() {
 
   useEffect(() => {
     // Load flashcards
-    fetch('/data/flashcards.json')
+    fetch('/flashcards.json')
       .then((res) => res.json())
       .then((data: FlashCard[]) => {
         setAllCards(data);
