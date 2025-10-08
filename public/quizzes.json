@@ -1,0 +1,416 @@
+[
+  {
+    "id": "exec-q1",
+    "chapterId": "executive-summary",
+    "type": "mcq",
+    "question": "According to the Softwar thesis, what is Bitcoin primarily?",
+    "options": [
+      "A digital currency for making payments",
+      "A speculative investment asset",
+      "A cyber power projection tactic for the digital age",
+      "A replacement for traditional banking"
+    ],
+    "correctAnswer": "A cyber power projection tactic for the digital age",
+    "explanation": "The bottom line of the thesis is that Bitcoin isn't strictly a monetary protocol, but rather a cyber power projection technology.",
+    "section": "Executive Summary - Introduction"
+  },
+  {
+    "id": "exec-q2",
+    "chapterId": "executive-summary",
+    "type": "mcq",
+    "question": "How does Bitcoin differ from traditional software in terms of security?",
+    "options": [
+      "Bitcoin uses better encryption algorithms",
+      "Bitcoin can physically constrain computers and impose physical costs on attackers",
+      "Bitcoin has more complex password requirements",
+      "Bitcoin stores data across multiple servers"
+    ],
+    "correctAnswer": "Bitcoin can physically constrain computers and impose physical costs on attackers",
+    "explanation": "While most software can only logically constrain computers, Bitcoin imposes severe physical costs (measured in watts) through proof-of-work.",
+    "section": "Executive Summary - Core Concept"
+  },
+  {
+    "id": "exec-q3",
+    "chapterId": "executive-summary",
+    "type": "mcq",
+    "question": "According to the thesis, what is the primary function of military branches?",
+    "options": [
+      "To win wars against enemy nations",
+      "To impose physical costs on those who deny access to thoroughfares",
+      "To develop advanced weapons technology",
+      "To maintain international peace through diplomacy"
+    ],
+    "correctAnswer": "To impose physical costs on those who deny access to thoroughfares",
+    "explanation": "Militaries preserve nations' ability to utilize thoroughfares (land, sea, air, space, cyberspace) by imposing severe physical costs on anyone who denies access.",
+    "section": "Executive Summary - Military Function"
+  },
+  {
+    "id": "exec-q4",
+    "chapterId": "executive-summary",
+    "type": "short-answer",
+    "question": "Explain why classifying Bitcoin as 'cryptocurrency' might be problematic from a national security perspective.",
+    "correctAnswer": "Open-ended: Should mention that categorizing Bitcoin as cryptocurrency causes it to be analyzed by financial regulators rather than national security strategists, missing its strategic significance as a cyber defense technology.",
+    "explanation": "The thesis argues this is a category error—like having accountants manage nuclear weapons strategy—that could compromise national security.",
+    "section": "Executive Summary - Categorization"
+  },
+  {
+    "id": "ch1-q1",
+    "chapterId": "ch1",
+    "type": "mcq",
+    "question": "What historical example does Chapter 1 use to illustrate successful deterrence through costly physical displays?",
+    "options": [
+      "The Great Wall of China",
+      "Constantinople's defensive walls",
+      "The Maginot Line",
+      "Hadrian's Wall"
+    ],
+    "correctAnswer": "Constantinople's defensive walls",
+    "explanation": "Constantinople's walls deterred attacks for over 1,000 years by making the cost of attack prohibitively high—a perfect example of BCR_A < 1.",
+    "section": "Chapter 1 - Historical Context"
+  },
+  {
+    "id": "ch1-q2",
+    "chapterId": "ch1",
+    "type": "mcq",
+    "question": "According to Clausewitz's theory presented in Chapter 1, what is war?",
+    "options": [
+      "An unavoidable feature of human nature",
+      "The continuation of politics by other means",
+      "A failure of diplomatic negotiations",
+      "The ultimate test of military strength"
+    ],
+    "correctAnswer": "The continuation of politics by other means",
+    "explanation": "Clausewitz defined war as a tool for achieving political objectives when diplomacy fails, not as an end in itself.",
+    "section": "Chapter 1 - Theory"
+  },
+  {
+    "id": "ch1-q3",
+    "chapterId": "ch1",
+    "type": "short-answer",
+    "question": "Why is cyberspace considered a strategic domain equivalent to land, sea, air, and space?",
+    "correctAnswer": "Open-ended: Should mention that cyberspace is an international thoroughfare for exchanging valuable information, requiring military consideration to secure access and defend resources.",
+    "explanation": "Just as militaries secure physical thoroughfares, they must now secure cyberspace to protect national interests.",
+    "section": "Chapter 1 - Cyberspace"
+  },
+  {
+    "id": "ch2-q1",
+    "chapterId": "ch2",
+    "type": "mcq",
+    "question": "What research methodology did Jason Lowery use for the Softwar thesis?",
+    "options": [
+      "Quantitative experimental analysis",
+      "Grounded Theory",
+      "Case study analysis",
+      "Systematic literature review"
+    ],
+    "correctAnswer": "Grounded Theory",
+    "explanation": "Lowery chose Grounded Theory because Bitcoin's strategic significance spans multiple disciplines and no existing framework adequately explained it.",
+    "section": "Chapter 2 - Methodology"
+  },
+  {
+    "id": "ch2-q2",
+    "chapterId": "ch2",
+    "type": "mcq",
+    "question": "What is a key advantage of Grounded Theory for studying Bitcoin?",
+    "options": [
+      "It allows for controlled experiments with Bitcoin",
+      "It enables building theories from observed patterns rather than testing pre-existing hypotheses",
+      "It requires less time than other methodologies",
+      "It is the most widely accepted methodology in computer science"
+    ],
+    "correctAnswer": "It enables building theories from observed patterns rather than testing pre-existing hypotheses",
+    "explanation": "Grounded Theory allows researchers to discover novel insights when exploring new territory where existing frameworks fall short.",
+    "section": "Chapter 2 - Grounded Theory"
+  },
+  {
+    "id": "ch3-q1",
+    "chapterId": "ch3",
+    "type": "mcq",
+    "question": "What does BCR_A stand for?",
+    "options": [
+      "Bitcoin Cost Ratio Analysis",
+      "Benefit-to-Cost Ratio of Attack",
+      "Blockchain Consensus Resource Allocation",
+      "Biological Competition Resource Assessment"
+    ],
+    "correctAnswer": "Benefit-to-Cost Ratio of Attack",
+    "explanation": "BCR_A = Benefit of Attack / Cost of Attack. If BCR_A > 1, attack is profitable; if < 1, attack is deterred.",
+    "section": "Chapter 3 - Primordial Economics"
+  },
+  {
+    "id": "ch3-q2",
+    "chapterId": "ch3",
+    "type": "mcq",
+    "question": "Why do elk grow antlers annually instead of maintaining permanent weapons?",
+    "options": [
+      "Permanent antlers would be too heavy",
+      "Annual growth is unforgeable proof-of-work showing current health",
+      "Antlers are primarily decorative, not functional",
+      "Permanent weapons would make elk too aggressive"
+    ],
+    "correctAnswer": "Annual growth is unforgeable proof-of-work showing current health",
+    "explanation": "Only strong, healthy elk can afford the massive energy cost of growing large antlers each year, creating an honest signal that cannot be faked.",
+    "section": "Chapter 3 - The Beauty of Antlers"
+  },
+  {
+    "id": "ch3-q3",
+    "chapterId": "ch3",
+    "type": "mcq",
+    "question": "According to the chapter, why is domestication dangerous?",
+    "options": [
+      "Domesticated animals lose their natural beauty",
+      "Domestication creates overpopulation",
+      "Domesticated species become dependent and lose survival capabilities",
+      "Domestication is morally wrong"
+    ],
+    "correctAnswer": "Domesticated species become dependent and lose survival capabilities",
+    "explanation": "Over generations, domesticated species trade independence for security, becoming unable to survive without their masters—a warning about human self-domestication.",
+    "section": "Chapter 3 - Domestication"
+  },
+  {
+    "id": "ch3-q4",
+    "chapterId": "ch3",
+    "type": "short-answer",
+    "question": "Explain the Survivor's Dilemma and how nature solves it.",
+    "correctAnswer": "Open-ended: Should explain that even when cooperation is optimal, aggression often wins short-term, creating evolutionary pressure toward conflict. Nature solves this through costly displays allowing strength assessment before fighting.",
+    "explanation": "Costly signals (like antlers) let organisms evaluate BCR_A before engaging in dangerous fights.",
+    "section": "Chapter 3 - Survivor's Dilemma"
+  },
+  {
+    "id": "ch4-q1",
+    "chapterId": "ch4",
+    "type": "mcq",
+    "question": "What cognitive ability distinguishes humans from other animals according to Chapter 4?",
+    "options": [
+      "Tool use",
+      "Abstract thinking",
+      "Language",
+      "Social cooperation"
+    ],
+    "correctAnswer": "Abstract thinking",
+    "explanation": "Humans can think about and believe in things that don't physically exist (gods, nations, money, laws), enabling large-scale cooperation.",
+    "section": "Chapter 4 - Cognitive Revolution"
+  },
+  {
+    "id": "ch4-q2",
+    "chapterId": "ch4",
+    "type": "mcq",
+    "question": "What is abstract power?",
+    "options": [
+      "Physical strength used symbolically",
+      "The ability to control resources through belief manipulation rather than physical force",
+      "Mathematical calculations of power dynamics",
+      "Theoretical models of political systems"
+    ],
+    "correctAnswer": "The ability to control resources through belief manipulation rather than physical force",
+    "explanation": "Abstract power includes religious authority, legal systems, monetary control, and technical permissions—all based on collective belief.",
+    "section": "Chapter 4 - Abstract Power"
+  },
+  {
+    "id": "ch4-q3",
+    "chapterId": "ch4",
+    "type": "mcq",
+    "question": "What does MAD stand for in the context of nuclear deterrence?",
+    "options": [
+      "Military Attack Defense",
+      "Mutually Assured Destruction",
+      "Massive Armament Deployment",
+      "Monitored Aggression Deterrent"
+    ],
+    "correctAnswer": "Mutually Assured Destruction",
+    "explanation": "MAD describes the nuclear deterrence strategy where both sides can destroy each other completely, making attack irrational.",
+    "section": "Chapter 4 - MAD"
+  },
+  {
+    "id": "ch4-q4",
+    "chapterId": "ch4",
+    "type": "mcq",
+    "question": "According to the chapter, which of the following is NOT a major failure mode of abstract power?",
+    "options": [
+      "Free Rider Problem",
+      "Principal-Agent Problem",
+      "Knowledge Problem",
+      "Encryption Problem"
+    ],
+    "correctAnswer": "Encryption Problem",
+    "explanation": "The three major failure modes are Free Rider, Principal-Agent, and Knowledge problems. Encryption is a technical solution, not a failure mode.",
+    "section": "Chapter 4 - Dysfunctions"
+  },
+  {
+    "id": "ch4-q5",
+    "chapterId": "ch4",
+    "type": "short-answer",
+    "question": "Why do 'humans need antlers' according to Chapter 4?",
+    "correctAnswer": "Open-ended: Should explain that just as elk use antlers to avoid fighting, humans need costly power projection technologies (like nuclear weapons or Bitcoin) to deter attacks without war.",
+    "explanation": "Costly signals enable peace by making aggression economically or strategically irrational.",
+    "section": "Chapter 4 - Humans Need Antlers"
+  },
+  {
+    "id": "ch5-q1",
+    "chapterId": "ch5",
+    "type": "mcq",
+    "question": "What fundamental problem does Bitcoin solve in cyberspace?",
+    "options": [
+      "Slow transaction speeds",
+      "High transaction fees",
+      "Inability to impose physical costs on attackers",
+      "Lack of privacy in digital transactions"
+    ],
+    "correctAnswer": "Inability to impose physical costs on attackers",
+    "explanation": "Traditional software can only logically constrain attackers. Bitcoin uses proof-of-work to make attacks physically expensive through massive electricity requirements.",
+    "section": "Chapter 5 - Cyber Security Problem"
+  },
+  {
+    "id": "ch5-q2",
+    "chapterId": "ch5",
+    "type": "mcq",
+    "question": "What is the Electro-Cyber Dome?",
+    "options": [
+      "A physical shield protecting data centers",
+      "A protective barrier created by Bitcoin's cumulative hash power",
+      "An encryption technology",
+      "A government surveillance system"
+    ],
+    "correctAnswer": "A protective barrier created by Bitcoin's cumulative hash power",
+    "explanation": "Like missile defense for physical territory, the Electro-Cyber Dome is a metaphor for how proof-of-work protects digital resources through cumulative physical cost.",
+    "section": "Chapter 5 - Electro-Cyber Dome"
+  },
+  {
+    "id": "ch5-q3",
+    "chapterId": "ch5",
+    "type": "mcq",
+    "question": "According to Lowery's novel computer theory, what is Bitcoin?",
+    "options": [
+      "A digital currency",
+      "A payment network",
+      "A planetary-scale physical cost function protocol",
+      "A speculative asset"
+    ],
+    "correctAnswer": "A planetary-scale physical cost function protocol",
+    "explanation": "Bitcoin turns electricity into 'digital physics,' making bits behave like atoms by anchoring them to unforgeable physical cost.",
+    "section": "Chapter 5 - Novel Theory"
+  },
+  {
+    "id": "ch5-q4",
+    "chapterId": "ch5",
+    "type": "mcq",
+    "question": "What does 'Softwar' mean?",
+    "options": [
+      "Software-based warfare tools",
+      "The projection of physical power in, from, and through cyberspace via proof-of-work",
+      "Psychological operations in military conflicts",
+      "Cyber espionage activities"
+    ],
+    "correctAnswer": "The projection of physical power in, from, and through cyberspace via proof-of-work",
+    "explanation": "Softwar is non-lethal warfare using hash power instead of kinetic weapons to secure digital resources.",
+    "section": "Chapter 5 - Softwar Definition"
+  },
+  {
+    "id": "ch5-q5",
+    "chapterId": "ch5",
+    "type": "mcq",
+    "question": "How does Bitcoin create 'Mutually Assured Preservation' rather than 'Mutually Assured Destruction'?",
+    "options": [
+      "Bitcoin prevents nuclear war",
+      "Everyone's mining secures everyone else's bitcoins, creating positive-sum security",
+      "Bitcoin backs up all data automatically",
+      "Bitcoin creates international peace treaties"
+    ],
+    "correctAnswer": "Everyone's mining secures everyone else's bitcoins, creating positive-sum security",
+    "explanation": "Unlike nuclear MAD (fear-based), Bitcoin MAP is benefit-based: your security increases my security, aligning incentives peacefully.",
+    "section": "Chapter 5 - MAP"
+  },
+  {
+    "id": "ch5-q6",
+    "chapterId": "ch5",
+    "type": "mcq",
+    "question": "Which of the following problems does Bitcoin's proof-of-work NOT address?",
+    "options": [
+      "Double-spending problem",
+      "Byzantine Generals Problem",
+      "Sybil Attack",
+      "Climate change"
+    ],
+    "correctAnswer": "Climate change",
+    "explanation": "Bitcoin addresses the five fundamental software security challenges by making participation physically expensive, but it doesn't directly address climate change.",
+    "section": "Chapter 5 - Security Challenges"
+  },
+  {
+    "id": "ch5-q7",
+    "chapterId": "ch5",
+    "type": "short-answer",
+    "question": "Explain why 'there is no second best' among proof-of-work cryptocurrencies.",
+    "correctAnswer": "Open-ended: Should mention network effects creating winner-take-all dynamics—most hash power → most security → most value → attracts more miners. Bitcoin's first-mover advantage makes it the Schelling point.",
+    "explanation": "Rational actors concentrate hash power in one system to maximize security for everyone, making Bitcoin dominant.",
+    "section": "Chapter 5 - No Second Best"
+  },
+  {
+    "id": "ch6-q1",
+    "chapterId": "conclusion",
+    "type": "mcq",
+    "question": "What is Lowery's primary policy recommendation for the US government?",
+    "options": [
+      "Ban Bitcoin to protect the dollar",
+      "Regulate Bitcoin as a security",
+      "Establish a Strategic Bitcoin Reserve",
+      "Remain neutral on Bitcoin adoption"
+    ],
+    "correctAnswer": "Establish a Strategic Bitcoin Reserve",
+    "explanation": "Lowery recommends early accumulation to gain strategic advantage, demonstrate commitment to decentralized cyber security, and prevent competitors from dominating supply.",
+    "section": "Chapter 6 - Policy Recommendations"
+  },
+  {
+    "id": "ch6-q2",
+    "chapterId": "conclusion",
+    "type": "mcq",
+    "question": "Why should Bitcoin mining be treated as critical infrastructure?",
+    "options": [
+      "Mining generates tax revenue",
+      "Hash power is strategic cyber defense capability like oil refineries or semiconductor fabs",
+      "Mining creates jobs",
+      "Mining uses renewable energy"
+    ],
+    "correctAnswer": "Hash power is strategic cyber defense capability like oil refineries or semiconductor fabs",
+    "explanation": "Dependence on foreign mining creates strategic vulnerability. Domestic hash power provides cyber defense capability.",
+    "section": "Chapter 6 - Infrastructure"
+  },
+  {
+    "id": "ch6-q3",
+    "chapterId": "conclusion",
+    "type": "mcq",
+    "question": "What are the three scenarios for US Bitcoin adoption outlined in the conclusion?",
+    "options": [
+      "Accept, Reject, Regulate",
+      "Lead, Follow, Ignore",
+      "Adopt, Adapt, Abandon",
+      "Promote, Permit, Prohibit"
+    ],
+    "correctAnswer": "Lead, Follow, Ignore",
+    "explanation": "Lead (accumulate reserves, develop hash power), Follow (adopt after competitors position themselves), Ignore (treat as curiosity, cede advantage).",
+    "section": "Chapter 6 - Future Scenarios"
+  },
+  {
+    "id": "ch6-q4",
+    "chapterId": "conclusion",
+    "type": "mcq",
+    "question": "According to the conclusion, why is categorizing Bitcoin as 'cryptocurrency' problematic?",
+    "options": [
+      "It's technically inaccurate since Bitcoin uses blockchain",
+      "It causes financial regulators rather than national security strategists to analyze it",
+      "It makes Bitcoin sound too complicated",
+      "It conflicts with IRS tax guidance"
+    ],
+    "correctAnswer": "It causes financial regulators rather than national security strategists to analyze it",
+    "explanation": "The thesis argues this is a category error—like having accountants manage nuclear weapons strategy—with national security consequences.",
+    "section": "Chapter 6 - Categorization"
+  },
+  {
+    "id": "ch6-q5",
+    "chapterId": "conclusion",
+    "type": "short-answer",
+    "question": "What deeper philosophical question does Bitcoin raise according to the conclusion?",
+    "correctAnswer": "Open-ended: Should discuss whether humanity can project power without violence—Bitcoin may be the first way to make attacks prohibitively expensive without threatening death.",
+    "explanation": "If successful, Bitcoin could represent an evolutionary step in civilization beyond kill-or-be-killed resource control.",
+    "section": "Chapter 6 - Philosophy"
+  }
+]

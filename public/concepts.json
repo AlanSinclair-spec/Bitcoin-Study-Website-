@@ -1,0 +1,167 @@
+[
+  {
+    "concept": "Power Projection Theory",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#power-projection-theory"
+        ]
+      }
+    ]
+  },
+  {
+    "concept": "Bitpower",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#bitpower"
+        ]
+      }
+    ]
+  },
+  {
+    "concept": "Proof-of-Work",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#proof-of-work"
+        ]
+      }
+    ]
+  },
+  {
+    "concept": "Softwar",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#softwar"
+        ]
+      }
+    ]
+  },
+  {
+    "concept": "Physical Cost",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#physical-cost"
+        ]
+      }
+    ]
+  },
+  {
+    "concept": "Deterrence",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#deterrence"
+        ]
+      }
+    ]
+  },
+  {
+    "concept": "Electro-Cyber Dome",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#electro-cyber-dome"
+        ]
+      }
+    ]
+  },
+  {
+    "concept": "Digital Power",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#digital-power"
+        ]
+      }
+    ]
+  },
+  {
+    "concept": "Hash Rate",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#hash-rate"
+        ]
+      }
+    ]
+  },
+  {
+    "concept": "Kinetic Power",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#kinetic-power"
+        ]
+      }
+    ]
+  },
+  {
+    "concept": "War vs Law",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#war-vs-law"
+        ]
+      }
+    ]
+  },
+  {
+    "concept": "Byzantine Generals Problem",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#byzantine-generals-problem"
+        ]
+      }
+    ]
+  },
+  {
+    "concept": "Consensus Mechanism",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#consensus-mechanism"
+        ]
+      }
+    ]
+  },
+  {
+    "concept": "Strategic Significance",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#strategic-significance"
+        ]
+      }
+    ]
+  },
+  {
+    "concept": "National Security",
+    "chapters": [
+      {
+        "chapter": "ch1",
+        "anchors": [
+          "#national-security"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "year": 1453,
+    "label": "Fall of Constantinople",
+    "sourceSection": "Historical Context",
+    "description": "Gunpowder weapons changed siege warfare"
+  },
+  {
+    "year": 1832,
+    "label": "Clausewitz On War published",
+    "sourceSection": "Theoretical Framework",
+    "description": "War as extension of politics"
+  },
+  {
+    "year": 1945,
+    "label": "Nuclear weapons used",
+    "sourceSection": "Power Projection History",
+    "description": "Ultimate kinetic deterrence"
+  },
+  {
+    "year": 2008,
+    "label": "Bitcoin whitepaper",
+    "sourceSection": "Chapter 1",
+    "description": "Introduction of Proof-of-Work consensus"
+  },
+  {
+    "year": 2009,
+    "label": "Bitcoin Genesis Block",
+    "sourceSection": "Chapter 1",
+    "description": "First block mined"
+  }
+]

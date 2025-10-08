@@ -1,0 +1,182 @@
+[
+  {
+    "term": "Proof-of-Work",
+    "definition": "A security mechanism that requires expending real physical energy (electricity) to validate transactions. Bitcoin miners compete to solve complex mathematical puzzles, making attacks prohibitively expensive.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/2-how-bitcoin-works", "/learn/ch5"]
+  },
+  {
+    "term": "Blockchain",
+    "definition": "A public ledger of all Bitcoin transactions, organized in blocks and linked together in a chain. Each block contains a cryptographic hash of the previous block, making it tamper-resistant.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/2-how-bitcoin-works"]
+  },
+  {
+    "term": "Mining",
+    "definition": "The process of using specialized computers to solve complex mathematical problems, validating transactions and adding new blocks to the blockchain. Miners receive newly created bitcoin as a reward.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/2-how-bitcoin-works"]
+  },
+  {
+    "term": "Halving",
+    "definition": "An event that occurs approximately every 4 years where the reward for mining new blocks is cut in half. This ensures Bitcoin's supply grows at a predictable, decreasing rate until reaching the 21 million cap.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/2-how-bitcoin-works", "/fundamentals/3-bitcoin-economics"]
+  },
+  {
+    "term": "21 Million Cap",
+    "definition": "The hard-coded maximum supply of Bitcoin that will ever exist. This makes Bitcoin scarce like gold, preventing inflation through unlimited creation.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/3-bitcoin-economics"]
+  },
+  {
+    "term": "Decentralization",
+    "definition": "The distribution of power and control across many independent participants rather than concentrating it in a single authority. Bitcoin has no CEO, no company, and no central server.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/1-introduction-to-bitcoin"]
+  },
+  {
+    "term": "Private Key",
+    "definition": "A secret number that proves ownership of bitcoin. Like a password that can't be reset, losing your private key means losing access to your bitcoin forever.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/4-security-and-technology"]
+  },
+  {
+    "term": "Public Key",
+    "definition": "A cryptographic identifier derived from your private key, used to receive bitcoin. You can share it publicly without risking your funds, like an email address.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/4-security-and-technology"]
+  },
+  {
+    "term": "Wallet",
+    "definition": "Software that stores your private keys and allows you to send and receive bitcoin. The bitcoin itself lives on the blockchain; your wallet just holds the keys.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/4-security-and-technology"]
+  },
+  {
+    "term": "Hash Rate",
+    "definition": "The total computational power securing the Bitcoin network, measured in hashes per second. Higher hash rate = more security against attacks.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/2-how-bitcoin-works", "/learn/ch5"]
+  },
+  {
+    "term": "Lightning Network",
+    "definition": "A second-layer solution built on top of Bitcoin that enables instant, low-cost transactions by keeping most activity off the main blockchain.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/6-future-of-bitcoin"]
+  },
+  {
+    "term": "Satoshi",
+    "definition": "The smallest unit of Bitcoin, equal to 0.00000001 BTC. Named after Bitcoin's creator, Satoshi Nakamoto.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/1-introduction-to-bitcoin"]
+  },
+  {
+    "term": "Node",
+    "definition": "A computer running Bitcoin software that validates transactions and stores a copy of the entire blockchain. Nodes enforce the rules and keep the network decentralized.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/2-how-bitcoin-works"]
+  },
+  {
+    "term": "Double-Spending",
+    "definition": "The problem of spending the same digital money twice. Bitcoin solves this through proof-of-work and the blockchain without requiring a central authority.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/2-how-bitcoin-works", "/learn/ch5"]
+  },
+  {
+    "term": "Softwar",
+    "definition": "The projection of physical power in, from, and through cyberspace via proof-of-work protocols. Non-lethal warfare using hash power instead of kinetic weapons to secure digital resources.",
+    "category": "softwar",
+    "relatedLessons": ["/learn/ch5", "/learn/conclusion"]
+  },
+  {
+    "term": "Power Projection",
+    "definition": "The ability to demonstrate control over resources by imposing physical costs on challengers. Applies across all domains: land, sea, air, space, and cyberspace.",
+    "category": "softwar",
+    "relatedLessons": ["/learn/executive-summary", "/learn/ch3", "/learn/ch5"]
+  },
+  {
+    "term": "BCR_A (Benefit-to-Cost Ratio of Attack)",
+    "definition": "The fundamental economic calculation: Benefits of attacking ÷ Costs of attacking. If BCR_A > 1, attack is profitable. If BCR_A < 1, attack is deterred.",
+    "category": "softwar",
+    "relatedLessons": ["/learn/ch3", "/learn/ch5"]
+  },
+  {
+    "term": "Electro-Cyber Dome",
+    "definition": "A protective barrier created by Bitcoin's cumulative hash power. Like missile defense for digital resources, it requires massive physical cost (electricity) to breach.",
+    "category": "softwar",
+    "relatedLessons": ["/learn/ch5"]
+  },
+  {
+    "term": "Mutually Assured Preservation (MAP)",
+    "definition": "Bitcoin's alternative to nuclear Mutually Assured Destruction. Everyone's mining secures everyone else's bitcoins, creating positive-sum security instead of zero-sum fear.",
+    "category": "softwar",
+    "relatedLessons": ["/learn/ch5", "/learn/conclusion"]
+  },
+  {
+    "term": "Bitpower",
+    "definition": "The concept of using hash rate (computational work) as a form of power projection in cyberspace, analogous to military power in physical domains.",
+    "category": "softwar",
+    "relatedLessons": ["/learn/ch5"]
+  },
+  {
+    "term": "Abstract Power",
+    "definition": "The ability to control resources through belief manipulation rather than physical force. Examples: religious authority, legal systems, monetary control, software permissions.",
+    "category": "softwar",
+    "relatedLessons": ["/learn/ch4"]
+  },
+  {
+    "term": "Physical Power",
+    "definition": "The ability to control resources through demonstrable physical capability that imposes real costs on challengers. Examples: walls, weapons, proof-of-work.",
+    "category": "softwar",
+    "relatedLessons": ["/learn/ch3", "/learn/ch4"]
+  },
+  {
+    "term": "Grounded Theory",
+    "definition": "A research methodology that builds explanations from systematic data analysis rather than testing pre-existing hypotheses. Used by Lowery to develop the Softwar thesis.",
+    "category": "softwar",
+    "relatedLessons": ["/learn/ch2"]
+  },
+  {
+    "term": "Primordial Economics",
+    "definition": "The fundamental economic calculation governing conflict in nature: whether attacking yields more benefit than cost. The BCR_A formula captures this.",
+    "category": "softwar",
+    "relatedLessons": ["/learn/ch3"]
+  },
+  {
+    "term": "Byzantine Generals Problem",
+    "definition": "The challenge of achieving consensus among distributed parties when some may be unreliable or malicious. Bitcoin solves this through proof-of-work.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/2-how-bitcoin-works", "/learn/ch5"]
+  },
+  {
+    "term": "Sybil Attack",
+    "definition": "An attack where one entity creates many fake identities to gain disproportionate influence. Bitcoin prevents this by making identity creation expensive (proof-of-work).",
+    "category": "bitcoin",
+    "relatedLessons": ["/learn/ch5"]
+  },
+  {
+    "term": "51% Attack",
+    "definition": "A theoretical attack where controlling over half the network's hash power allows rewriting transaction history. Bitcoin's massive hash rate makes this prohibitively expensive.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/2-how-bitcoin-works"]
+  },
+  {
+    "term": "Consensus Mechanism",
+    "definition": "The method by which distributed networks agree on the state of the ledger. Bitcoin uses proof-of-work; other systems use proof-of-stake or other methods.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/2-how-bitcoin-works"]
+  },
+  {
+    "term": "Inflation vs Deflation",
+    "definition": "Inflation: currency supply increases, reducing purchasing power. Deflation: fixed supply increases value over time. Bitcoin is deflationary due to the 21M cap.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/3-bitcoin-economics"]
+  },
+  {
+    "term": "Store of Value",
+    "definition": "An asset that maintains purchasing power over time. Gold is a traditional store of value; Bitcoin aims to be a digital equivalent due to its scarcity.",
+    "category": "bitcoin",
+    "relatedLessons": ["/fundamentals/3-bitcoin-economics"]
+  }
+]

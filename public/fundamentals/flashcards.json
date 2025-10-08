@@ -1,0 +1,33 @@
+[
+  {"id":"fund-1-1","lesson":"1","front":"What is Bitcoin?","back":"Digital money that works without banks or governments, using a decentralized network of computers worldwide.","tags":["basics"]},
+  {"id":"fund-1-2","lesson":"1","front":"Who created Bitcoin and when?","back":"Satoshi Nakamoto published the Bitcoin paper in 2008 and released the software in 2009. Their true identity remains unknown.","tags":["history"]},
+  {"id":"fund-1-3","lesson":"1","front":"What does decentralization mean in Bitcoin?","back":"No single person, company, or government controls Bitcoin. Instead, thousands of computers work together to enforce rules through math and code.","tags":["decentralization"]},
+  {"id":"fund-1-4","lesson":"1","front":"How many Bitcoin will ever exist?","back":"21 million Bitcoin maximum. This fixed supply cannot be changed.","tags":["scarcity"]},
+  {"id":"fund-1-5","lesson":"1","front":"How does Bitcoin differ from traditional money?","back":"Bitcoin has no central controller, fixed supply (vs infinite printing), requires no intermediaries, and works globally without borders.","tags":["comparison"]},
+
+  {"id":"fund-2-1","lesson":"2","front":"What is the blockchain?","back":"A shared record of all Bitcoin transactions, stored across thousands of computers. New blocks are added every 10 minutes.","tags":["blockchain"]},
+  {"id":"fund-2-2","lesson":"2","front":"What is Bitcoin mining?","back":"Computers competing to solve math puzzles to add new blocks and earn Bitcoin rewards. This secures the network.","tags":["mining"]},
+  {"id":"fund-2-3","lesson":"2","front":"What is the halving?","back":"Every 4 years, mining rewards cut in half. This enforces scarcity and happens until ~2140 when all 21M Bitcoin are mined.","tags":["halving"]},
+  {"id":"fund-2-4","lesson":"2","front":"What do Bitcoin nodes do?","back":"Store the full blockchain, validate transactions according to rules, relay information, and reject invalid transactions.","tags":["nodes"]},
+  {"id":"fund-2-5","lesson":"2","front":"How does Proof-of-Work secure Bitcoin?","back":"It makes attacking the network extremely expensive by requiring massive computational power and electricity expenditure.","tags":["pow"]},
+
+  {"id":"fund-3-1","lesson":"3","front":"Why is Bitcoin called digital gold?","back":"Like gold, Bitcoin is scarce, durable, divisible, and valuable. Unlike gold, it's instantly portable and cryptographically verifiable.","tags":["economics"]},
+  {"id":"fund-3-2","lesson":"3","front":"What's the difference between inflation and deflation?","back":"Inflation: currency loses value as supply increases. Deflation: currency gains value with fixed supply. Bitcoin is deflationary.","tags":["economics"]},
+  {"id":"fund-3-3","lesson":"3","front":"What is Bitcoin's 4-year cycle?","back":"Bitcoin price moves in cycles: bear market (drop 70-90%), accumulation, bull market (new highs), euphoria and crash. Repeats every ~4 years around halving.","tags":["cycles"]},
+  {"id":"fund-3-4","lesson":"3","front":"Store of value vs medium of exchange?","back":"Store of value preserves wealth over time (like gold). Medium of exchange enables daily transactions (like dollars). Bitcoin aims to do both.","tags":["use-cases"]},
+
+  {"id":"fund-4-1","lesson":"4","front":"What's a private key?","back":"Secret code that gives complete control over your Bitcoin. Like a password—never share it. Lose it and you lose your Bitcoin forever.","tags":["security"]},
+  {"id":"fund-4-2","lesson":"4","front":"What's a public key?","back":"Your Bitcoin address that others use to send you Bitcoin. Safe to share publicly, like an email address or account number.","tags":["security"]},
+  {"id":"fund-4-3","lesson":"4","front":"What is the double-spending problem?","back":"The challenge of preventing digital money from being copied and spent twice. Bitcoin solves this through network consensus and Proof-of-Work.","tags":["technology"]},
+  {"id":"fund-4-4","lesson":"4","front":"Best practices for securing Bitcoin?","back":"Write down seed phrase on paper, store multiple copies in secure locations, never store digitally, test your backup by restoring.","tags":["security"]},
+  {"id":"fund-4-5","lesson":"4","front":"Bitcoin energy use debate?","back":"Uses ~0.5% global electricity. Critics say it's wasteful; supporters argue it's the cost of security, uses renewables, and compares favorably to banking.","tags":["energy"]},
+
+  {"id":"fund-5-1","lesson":"5","front":"What did El Salvador do with Bitcoin?","back":"In 2021, became first country to make Bitcoin legal tender. Mixed adoption results, but proves national-scale use is possible.","tags":["adoption"]},
+  {"id":"fund-5-2","lesson":"5","front":"How does Bitcoin help the unbanked?","back":"1.4 billion people lack bank accounts. Bitcoin needs no paperwork, no minimum balance, no ID. Access financial tools with just internet.","tags":["financial-inclusion"]},
+  {"id":"fund-5-3","lesson":"5","front":"Common Bitcoin myths?","back":"Myth: only for criminals (<1% illicit use). Myth: can be hacked (network never hacked in 15 years). Myth: no value (subjective, market determines).","tags":["misconceptions"]},
+
+  {"id":"fund-6-1","lesson":"6","front":"What is the Lightning Network?","back":"Layer 2 solution for instant Bitcoin transactions with micro-fees. Opens payment channels for off-chain transactions, settles on Bitcoin blockchain.","tags":["lightning"]},
+  {"id":"fund-6-2","lesson":"6","front":"How does Bitcoin compare to altcoins?","back":"Bitcoin: first-mover, most secure, most decentralized, simple. Altcoins: claim faster/smarter features but less proven, often more centralized.","tags":["competition"]},
+  {"id":"fund-6-3","lesson":"6","front":"Bitcoin and AI integration?","back":"Potential for micropayments to AI services, machine-to-machine payments, AI-powered trading/security tools. Cutting-edge speculation.","tags":["future"]},
+  {"id":"fund-6-4","lesson":"6","front":"Bitcoin's 50-year outlook?","back":"Likely becomes global store of value and settlement layer, coexisting with national currencies. Lightning handles retail payments. Challenges remain (scaling, energy, regulation).","tags":["future"]}
+]
