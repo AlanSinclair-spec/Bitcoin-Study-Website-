@@ -163,7 +163,7 @@ export class SupabaseSync {
           .order('miss_count', { ascending: false }),
       ]);
 
-      // Transform and save to localStorage
+      // Transform and save to localStorage (fixed TypeScript error)
       if (entriesResult.data) {
         const entries: JournalEntry[] = entriesResult.data.map((e: any) => ({
           id: e.id,
