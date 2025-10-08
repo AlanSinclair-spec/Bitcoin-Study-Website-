@@ -3,29 +3,9 @@
  * Persists lesson completion and quiz scores to localStorage
  */
 
-export interface LessonProgress {
-  lessonId: string;
-  module: 'fundamentals' | 'softwar';
-  completed: boolean;
-  completedAt?: string;
-  quizScore?: number;
-  quizAttempts?: number;
-}
+import type { LessonProgress, ModuleProgress, WeakArea } from './types';
 
-export interface ModuleProgress {
-  module: 'fundamentals' | 'softwar';
-  totalLessons: number;
-  completedLessons: number;
-  percentComplete: number;
-  averageQuizScore: number;
-}
-
-export interface WeakArea {
-  topic: string;
-  missCount: number;
-  relatedLessons: string[];
-  suggestedFlashcards: string[];
-}
+export type { LessonProgress, ModuleProgress, WeakArea };
 
 class ProgressStorage {
   private STORAGE_KEY = 'learning-progress';
@@ -176,6 +156,80 @@ class ProgressStorage {
       localStorage.removeItem(this.WEAK_AREAS_KEY);
       return [];
     }
+  }
+
+  /**
+   * Get all lesson progress (alias for getProgress)
+   */
+  async getAllProgress(): Promise<LessonProgress[]> {
+    return this.getProgress();
+  }
+
+  /**
+   * Get all weak areas
+   */
+  async getAllWeakAreas(): Promise<WeakArea[]> {
+    if (typeof window === 'undefined') return [];
+
+    try {
+      const data = localStorage.getItem(this.WEAK_AREAS_KEY);
+      if (!data) return [];
+
+      const weakAreas: Record<string, WeakArea> = JSON.parse(data);
+      return Object.values(weakAreas).sort((a, b) => b.missCount - a.missCount);
+    } catch (error) {
+      console.error('Failed to parse weak areas data, resetting:', error);
+      localStorage.removeItem(this.WEAK_AREAS_KEY);
+      return [];
+    }
+  }
+
+  /**
+   * Save lesson progress (for Supabase sync)
+   */
+  async saveProgress(
+    lessonId: string,
+    module: 'fundamentals' | 'softwar',
+    completed: boolean,
+    quizScore?: number
+  ): Promise<void> {
+    const allProgress = await this.getProgress();
+    const existing = allProgress.findIndex(p => p.lessonId === lessonId);
+
+    const updated: LessonProgress = {
+      lessonId,
+      module,
+      completed,
+      quizScore,
+      completedAt: completed ? new Date().toISOString() : undefined,
+    };
+
+    if (existing >= 0) {
+      allProgress[existing] = { ...allProgress[existing], ...updated };
+    } else {
+      allProgress.push(updated);
+    }
+
+    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(allProgress));
+  }
+
+  /**
+   * Save weak area (for Supabase sync)
+   */
+  async saveWeakArea(topic: string, missCount: number, relatedLessons: string[]): Promise<void> {
+    if (typeof window === 'undefined') return;
+
+    const data = localStorage.getItem(this.WEAK_AREAS_KEY);
+    const weakAreas: Record<string, WeakArea> = data ? JSON.parse(data) : {};
+
+    weakAreas[topic] = {
+      topic,
+      missCount,
+      relatedLessons,
+      suggestedFlashcards: weakAreas[topic]?.suggestedFlashcards || [],
+    };
+
+    localStorage.setItem(this.WEAK_AREAS_KEY, JSON.stringify(weakAreas));
   }
 
   /**
