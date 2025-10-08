@@ -31,49 +31,31 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={cn(inter.className, inter.variable, 'min-h-screen bg-background antialiased')}>
         <div className="relative flex min-h-screen flex-col">
-          <header className="sticky top-0 z-50 w-full border-b glass animate-slide-in">
-            <div className="container flex h-16 items-center">
-              <div className="mr-8 flex">
-                <a
-                  className="mr-8 flex items-center space-x-2 group transition-all"
-                  href="/"
-                >
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm group-hover:scale-110 transition-transform">
-                    S
-                  </div>
-                  <span className="font-bold text-lg gradient-text">Softwar Learning</span>
-                </a>
-                <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
-                  <a
-                    href="/fundamentals"
-                    className="transition-all hover:text-primary relative after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
-                  >
-                    Bitcoin Basics
+          <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 animate-slide-in">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="flex h-16 items-center justify-between">
+                {/* Logo */}
+                <div className="flex items-center space-x-3">
+                  <a href="/" className="flex items-center space-x-3 group">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-[#F7931A] to-[#FDB931] transform group-hover:scale-110 transition-transform duration-200">
+                      <span className="font-bold text-white">S</span>
+                    </div>
+                    <span className="text-xl font-semibold text-[#0F172A]">Softwar Learning</span>
                   </a>
-                  <a
-                    href="/learn"
-                    className="transition-all hover:text-primary relative after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
-                  >
-                    Softwar
-                  </a>
-                  <a
-                    href="/journal"
-                    className="transition-all hover:text-primary relative after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
-                  >
-                    Journal
-                  </a>
-                  <a
-                    href="/flashcards"
-                    className="transition-all hover:text-primary relative after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
-                  >
-                    Flashcards
-                  </a>
-                  <a
-                    href="/glossary"
-                    className="transition-all hover:text-primary relative after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
-                  >
-                    Glossary
-                  </a>
+                </div>
+
+                {/* Navigation */}
+                <nav className="hidden lg:flex items-center space-x-8">
+                  {["Bitcoin Basics", "Softwar", "Journal", "Flashcards", "Glossary"].map((item) => (
+                    <a
+                      key={item}
+                      href={`/${item.toLowerCase().replace(' ', '-') === 'bitcoin-basics' ? 'fundamentals' : item.toLowerCase().replace(' ', '-')}`}
+                      className="relative text-[#0F172A] hover:text-[#F7931A] transition-colors duration-200 group font-medium"
+                    >
+                      {item}
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#F7931A] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                  ))}
                 </nav>
               </div>
             </div>

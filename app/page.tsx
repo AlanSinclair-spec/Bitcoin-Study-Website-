@@ -1,355 +1,275 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, BookOpen, Brain, Search, Clock, CheckCircle2, Sparkles, Target, Zap } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Progress } from '@/components/ui/progress';
+import { ArrowRight, BookOpen, Brain, Search, Clock, CheckCircle2, Sparkles, Target, Zap, Book } from 'lucide-react';
 import Link from 'next/link';
 import { ModuleProgressBar } from '@/components/progress-tracker';
 
 export default function HomePage() {
   return (
-    <div className="container py-10">
-      {/* Hero Section */}
-      <section className="mx-auto flex max-w-[980px] flex-col items-center gap-6 py-12 md:py-20 animate-fade-in">
-        <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary animate-scale-in">
-          <Sparkles className="h-4 w-4" />
-          <span>Interactive Learning Platform</span>
+    <div className="min-h-screen">
+      {/* Hero Section - Premium Design */}
+      <section className="relative overflow-hidden bg-white py-20 lg:py-28">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 h-32 w-32 rounded-full bg-gradient-to-br from-[#F7931A] to-[#FDB931] blur-3xl"></div>
+          <div className="absolute top-40 right-20 h-48 w-48 rounded-full bg-gradient-to-br from-[#FDB931] to-[#F7931A] blur-3xl"></div>
+          <div className="absolute bottom-20 left-1/3 h-40 w-40 rounded-full bg-gradient-to-br from-[#F7931A] to-[#FDB931] blur-3xl"></div>
         </div>
-        <h1 className="text-center text-4xl font-bold leading-tight tracking-tighter md:text-6xl lg:text-7xl lg:leading-[1.1]">
-          Master Bitcoin &<br />
-          <span className="gradient-text">Strategic Power Theory</span>
-        </h1>
-        <p className="max-w-[750px] text-center text-lg text-muted-foreground sm:text-xl leading-relaxed">
-          Learn Bitcoin from the ground up, then explore Softwar's strategic insights on power projection and national security. Track your progress with interactive quizzes, flashcards, and personal reflection.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 mt-4">
-          <Link href="/fundamentals">
-            <Button size="lg" className="group glow hover:shadow-2xl transition-all">
-              Start with Bitcoin Basics
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-          <Link href="/learn">
-            <Button size="lg" variant="outline" className="border-2 hover:border-primary hover:text-primary transition-all">
-              Jump to Softwar
-            </Button>
-          </Link>
-        </div>
-        <div className="flex items-center gap-8 mt-8 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="h-4 w-4 text-primary" />
-            <span>6 Bitcoin Lessons</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="h-4 w-4 text-primary" />
-            <span>7 Softwar Chapters</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="h-4 w-4 text-primary" />
-            <span>100+ Flashcards</span>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            {/* Floating Badge */}
+            <div className="mb-8 flex justify-center">
+              <Badge className="bg-gradient-to-r from-[#F7931A] to-[#FDB931] text-white px-6 py-2 text-sm font-medium shadow-lg animate-pulse">
+                ✨ Interactive Learning Platform
+              </Badge>
+            </div>
+
+            {/* Headline */}
+            <h1 className="mx-auto max-w-4xl text-4xl font-bold tracking-tight text-[#0F172A] sm:text-5xl lg:text-6xl">
+              Master{" "}
+              <span className="bg-gradient-to-r from-[#F7931A] to-[#FDB931] bg-clip-text text-transparent">
+                Bitcoin
+              </span>{" "}
+              &{" "}
+              <span className="bg-gradient-to-r from-[#FDB931] to-[#F7931A] bg-clip-text text-transparent">
+                Strategic Power Theory
+              </span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-[#64748B]">
+              Dive deep into Bitcoin fundamentals and strategic power dynamics with our comprehensive,
+              interactive learning platform designed for serious students.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link href="/fundamentals">
+                <Button
+                  size="lg"
+                  className="bg-[#F7931A] hover:bg-[#E88514] text-white px-8 py-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+                >
+                  Start Learning
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/learn">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-[#F7931A] text-[#F7931A] hover:bg-[#F7931A] hover:text-white px-8 py-4 transition-all duration-200"
+                >
+                  Explore Courses
+                </Button>
+              </Link>
+            </div>
+
+            {/* Stats Bar */}
+            <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-8 text-[#64748B]">
+              <div className="flex items-center space-x-2">
+                <CheckCircle2 className="h-5 w-5 text-[#F7931A]" />
+                <span>6 Bitcoin Lessons</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle2 className="h-5 w-5 text-[#F7931A]" />
+                <span>7 Softwar Chapters</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle2 className="h-5 w-5 text-[#F7931A]" />
+                <span>100+ Flashcards</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* What to Do First - 3-Step Checklist */}
-      <section className="mx-auto max-w-[980px] py-12">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold mb-3">What to Do First</h2>
-          <p className="text-muted-foreground">Choose your learning path based on your current knowledge</p>
-        </div>
-        <div className="grid gap-6 md:grid-cols-3 stagger-children">
-          <Card className="border-2 hover-lift cursor-pointer group relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500" />
-            <CardContent className="pt-6 relative">
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-bg text-primary-foreground font-bold text-lg shadow-lg">
-                  1
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-bold mb-2 text-lg flex items-center gap-2">
-                    New Learner?
-                    <Target className="h-4 w-4 text-primary" />
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                    Start with Bitcoin Fundamentals Lesson 1 to build a solid foundation.
-                  </p>
-                  <Link href="/fundamentals/1-introduction-to-bitcoin">
-                    <Button size="sm" className="w-full group-hover:shadow-lg transition-shadow">
-                      Begin Learning
-                      <ArrowRight className="ml-2 h-3 w-3" />
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+      {/* Learning Path Cards - Premium Design */}
+      <section className="py-20 bg-[#F8FAFC]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-[#0F172A] sm:text-4xl">
+              Choose Your Learning Path
+            </h2>
+            <p className="mt-4 text-lg text-[#64748B] max-w-2xl mx-auto">
+              Structured learning paths designed to take you from beginner to expert
+            </p>
+          </div>
 
-          <Card className="border-2 hover-lift cursor-pointer group relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500" />
-            <CardContent className="pt-6 relative">
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-bg text-primary-foreground font-bold text-lg shadow-lg">
-                  2
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-bold mb-2 text-lg flex items-center gap-2">
-                    Know the Basics?
-                    <Zap className="h-4 w-4 text-primary" />
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                    Jump to Softwar Executive Summary for strategic insights.
-                  </p>
-                  <Link href="/learn/executive-summary">
-                    <Button size="sm" className="w-full" variant="outline">
-                      Read Softwar
-                      <ArrowRight className="ml-2 h-3 w-3" />
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="grid gap-8 md:grid-cols-3">
+            {[
+              {
+                id: 1,
+                icon: Book,
+                title: "New Learner?",
+                description: "Start with Bitcoin Fundamentals Lesson 1 to build a solid foundation in cryptocurrency basics.",
+                buttonText: "Begin Learning",
+                href: "/fundamentals/1-introduction-to-bitcoin"
+              },
+              {
+                id: 2,
+                icon: Zap,
+                title: "Know the Basics?",
+                description: "Jump to Softwar Executive Summary for strategic insights on power projection and security.",
+                buttonText: "Read Softwar",
+                href: "/learn/executive-summary"
+              },
+              {
+                id: 3,
+                icon: Brain,
+                title: "Build Memory",
+                description: "Review 10 flashcards daily using spaced repetition to cement your knowledge.",
+                buttonText: "Practice Now",
+                href: "/flashcards"
+              }
+            ].map((path) => {
+              const IconComponent = path.icon;
+              return (
+                <Card
+                  key={path.id}
+                  className="relative group cursor-pointer border-0 bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+                >
+                  {/* Decorative gradient */}
+                  <div className="absolute top-0 right-0 h-20 w-20 bg-gradient-to-br from-[#F7931A]/20 to-[#FDB931]/20 rounded-bl-full"></div>
 
-          <Card className="border-2 hover-lift cursor-pointer group relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500" />
-            <CardContent className="pt-6 relative">
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-bg text-primary-foreground font-bold text-lg shadow-lg">
-                  3
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-bold mb-2 text-lg flex items-center gap-2">
-                    Build Memory
-                    <Brain className="h-4 w-4 text-primary" />
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                    Review 10 flashcards daily using spaced repetition.
-                  </p>
-                  <Link href="/flashcards">
-                    <Button size="sm" className="w-full" variant="outline">
-                      Practice Now
-                      <ArrowRight className="ml-2 h-3 w-3" />
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+                  {/* Number badge */}
+                  <div className="absolute -top-4 -left-4 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#F7931A] to-[#FDB931] text-white font-bold text-lg shadow-lg">
+                    {path.id}
+                  </div>
+
+                  <CardHeader className="pt-8">
+                    <div className="flex items-center justify-center h-16 w-16 mx-auto rounded-lg bg-gradient-to-br from-[#F7931A]/10 to-[#FDB931]/10 mb-4">
+                      <IconComponent className="h-8 w-8 text-[#F7931A]" />
+                    </div>
+                    <CardTitle className="text-xl font-bold text-center text-[#0F172A]">
+                      {path.title}
+                    </CardTitle>
+                  </CardHeader>
+
+                  <CardContent className="text-center pb-8">
+                    <CardDescription className="text-[#64748B] mb-6 leading-relaxed">
+                      {path.description}
+                    </CardDescription>
+                    <Link href={path.href}>
+                      <Button
+                        className="w-full bg-[#F7931A] hover:bg-[#E88514] text-white group-hover:shadow-lg transition-all duration-200"
+                      >
+                        {path.buttonText}
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      {/* Module Progress Bars */}
-      <section className="mx-auto max-w-[980px] py-12">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold mb-3">Your Progress</h2>
-          <p className="text-muted-foreground">Track your learning journey across both modules</p>
-        </div>
-        <div className="grid gap-6 md:grid-cols-2">
-          <Card className="border-2 hover-lift group">
-            <CardHeader>
-              <div className="flex items-center justify-between">
-                <div>
-                  <CardTitle className="flex items-center gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-                    Bitcoin Fundamentals
-                  </CardTitle>
-                  <CardDescription className="mt-1">Master the technology and economics</CardDescription>
-                </div>
-                <BookOpen className="h-8 w-8 text-primary/30 group-hover:text-primary transition-colors" />
-              </div>
-            </CardHeader>
-            <CardContent>
-              <ModuleProgressBar module="fundamentals" />
-              <div className="mt-6">
-                <Link href="/fundamentals">
-                  <Button size="sm" variant="outline" className="w-full group-hover:border-primary group-hover:text-primary transition-all">
-                    View All Lessons
-                    <ArrowRight className="ml-2 h-3 w-3" />
-                  </Button>
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
+      {/* Progress Dashboard - Premium Design */}
+      <section className="py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-[#0F172A] sm:text-4xl">
+              Your Learning Progress
+            </h2>
+            <p className="mt-4 text-lg text-[#64748B] max-w-2xl mx-auto">
+              Track your advancement through each module and celebrate your achievements
+            </p>
+          </div>
 
-          <Card className="border-2 hover-lift group">
-            <CardHeader>
-              <div className="flex items-center justify-between">
-                <div>
-                  <CardTitle className="flex items-center gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-                    Softwar Strategy
-                  </CardTitle>
-                  <CardDescription className="mt-1">Understand national security implications</CardDescription>
-                </div>
-                <Target className="h-8 w-8 text-primary/30 group-hover:text-primary transition-colors" />
-              </div>
-            </CardHeader>
-            <CardContent>
-              <ModuleProgressBar module="softwar" />
-              <div className="mt-6">
-                <Link href="/learn">
-                  <Button size="sm" variant="outline" className="w-full group-hover:border-primary group-hover:text-primary transition-all">
-                    View All Chapters
-                    <ArrowRight className="ml-2 h-3 w-3" />
-                  </Button>
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+            {[
+              {
+                title: "Bitcoin Fundamentals",
+                icon: BookOpen,
+                module: "fundamentals" as const,
+                href: "/fundamentals"
+              },
+              {
+                title: "Softwar Strategy",
+                icon: Target,
+                module: "softwar" as const,
+                href: "/learn"
+              }
+            ].map((item) => {
+              const IconComponent = item.icon;
+              return (
+                <Card
+                  key={item.title}
+                  className="group cursor-pointer border-0 bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+                >
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        {/* Pulsing dot indicator */}
+                        <div className="relative">
+                          <div className="h-3 w-3 bg-[#F7931A] rounded-full animate-pulse"></div>
+                          <div className="absolute top-0 left-0 h-3 w-3 bg-[#F7931A] rounded-full animate-ping opacity-50"></div>
+                        </div>
+                        <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-[#F7931A]/10 to-[#FDB931]/10">
+                          <IconComponent className="h-6 w-6 text-[#F7931A]" />
+                        </div>
+                      </div>
+                    </div>
+                    <CardTitle className="text-xl font-bold text-[#0F172A] mt-4">
+                      {item.title}
+                    </CardTitle>
+                  </CardHeader>
+
+                  <CardContent className="space-y-4">
+                    <ModuleProgressBar module={item.module} />
+
+                    <Link href={item.href}>
+                      <Button
+                        variant="outline"
+                        className="w-full border-2 border-[#F7931A] text-[#F7931A] hover:bg-[#F7931A] hover:text-white group-hover:shadow-md transition-all duration-200"
+                      >
+                        View Lessons
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
         </div>
       </section>
 
       {/* How to Use Section */}
-      <section className="mx-auto max-w-[980px] py-12 bg-muted/30 rounded-3xl px-6 md:px-12">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold mb-3">How to Use This Course</h2>
-          <p className="text-muted-foreground">Follow these four steps for effective learning</p>
-        </div>
-        <div className="grid gap-6 md:grid-cols-2">
-          <Card className="border-2 hover-lift group bg-background">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-lg">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                  <BookOpen className="h-5 w-5" />
+      <section className="py-20 bg-[#F8FAFC]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-[#0F172A] sm:text-4xl">
+              How It Works
+            </h2>
+            <p className="mt-4 text-lg text-[#64748B] max-w-2xl mx-auto">
+              Four simple steps to master Bitcoin and strategic theory
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: BookOpen, title: "Read Lessons", desc: "Work through structured content" },
+              { icon: Brain, title: "Practice", desc: "Test with flashcards & quizzes" },
+              { icon: Search, title: "Explore", desc: "Use glossary & resources" },
+              { icon: Clock, title: "Track Progress", desc: "Monitor your mastery" }
+            ].map((step) => {
+              const IconComponent = step.icon;
+              return (
+                <div key={step.title} className="text-center">
+                  <div className="flex h-16 w-16 mx-auto items-center justify-center rounded-xl bg-gradient-to-br from-[#F7931A] to-[#FDB931] shadow-lg mb-4">
+                    <IconComponent className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#0F172A] mb-2">{step.title}</h3>
+                  <p className="text-sm text-[#64748B]">{step.desc}</p>
                 </div>
-                <span>Read Chapters</span>
-              </CardTitle>
-              <CardDescription className="ml-13">
-                Work through each chapter systematically from Executive Summary through the full thesis
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="ml-13">
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Each chapter includes key concepts, figures, and policy implications. Mark chapters complete as you finish them.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="border-2 hover-lift group bg-background">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-lg">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                  <Brain className="h-5 w-5" />
-                </div>
-                <span>Practice Concepts</span>
-              </CardTitle>
-              <CardDescription className="ml-13">
-                Test your knowledge with flashcards and chapter quizzes
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="ml-13">
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Spaced repetition flashcards help retention. Take quizzes after each chapter to verify understanding.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="border-2 hover-lift group bg-background">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-lg">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                  <Search className="h-5 w-5" />
-                </div>
-                <span>Explore Resources</span>
-              </CardTitle>
-              <CardDescription className="ml-13">
-                Use the glossary, figures gallery, and timeline to deepen understanding
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="ml-13">
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Cross-reference concepts, review visual aids, and contextualize ideas historically.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="border-2 hover-lift group bg-background">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-lg">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                  <Clock className="h-5 w-5" />
-                </div>
-                <span>Track Progress</span>
-              </CardTitle>
-              <CardDescription className="ml-13">
-                Monitor your mastery and revisit weak areas
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="ml-13">
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                The platform tracks chapter completion, quiz scores, and flashcard reviews to guide your learning.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Quick Links */}
-      <section className="mx-auto max-w-[980px] py-12">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold mb-3">Quick Start</h2>
-          <p className="text-muted-foreground">Jump directly into key topics</p>
-        </div>
-        <div className="grid gap-4 md:grid-cols-3">
-          <Link href="/learn/executive-summary">
-            <Card className="border-2 hover-lift cursor-pointer group h-full">
-              <CardHeader>
-                <CardTitle className="group-hover:text-primary transition-colors">
-                  Executive Summary
-                </CardTitle>
-                <CardDescription>Overview of the core thesis</CardDescription>
-              </CardHeader>
-            </Card>
-          </Link>
-          <Link href="/learn/ch1">
-            <Card className="border-2 hover-lift cursor-pointer group h-full">
-              <CardHeader>
-                <CardTitle className="group-hover:text-primary transition-colors">
-                  Chapter 1
-                </CardTitle>
-                <CardDescription>Power Projection & History</CardDescription>
-              </CardHeader>
-            </Card>
-          </Link>
-          <Link href="/glossary">
-            <Card className="border-2 hover-lift cursor-pointer group h-full">
-              <CardHeader>
-                <CardTitle className="group-hover:text-primary transition-colors">
-                  Glossary
-                </CardTitle>
-                <CardDescription>Key terms and definitions</CardDescription>
-              </CardHeader>
-            </Card>
-          </Link>
-        </div>
-      </section>
-
-      {/* Core Concepts Preview */}
-      <section className="mx-auto max-w-[980px] py-12 mb-12">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold mb-3">Core Concepts</h2>
-          <p className="text-muted-foreground">Explore fundamental ideas from the course</p>
-        </div>
-        <div className="flex flex-wrap gap-3 justify-center">
-          {[
-            'Power Projection Theory',
-            'Bitpower',
-            'Proof-of-Work',
-            'Softwar',
-            'Physical Cost',
-            'Deterrence',
-            'Electro-Cyber Dome',
-            'Hash Rate',
-            'Byzantine Generals Problem',
-          ].map((concept) => (
-            <Link key={concept} href={`/glossary?q=${encodeURIComponent(concept)}`}>
-              <Button
-                variant="outline"
-                size="sm"
-                className="border-2 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all"
-              >
-                {concept}
-              </Button>
-            </Link>
-          ))}
+              );
+            })}
+          </div>
         </div>
       </section>
     </div>
