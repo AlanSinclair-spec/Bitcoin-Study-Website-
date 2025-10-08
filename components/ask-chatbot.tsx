@@ -84,7 +84,7 @@ export function AskChatbot() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 w-96 max-h-[600px] flex flex-col bg-white dark:bg-gray-900 border rounded-lg shadow-2xl">
+    <div className="fixed bottom-6 right-6 z-50 w-96 max-h-[600px] flex flex-col bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-700 rounded-lg shadow-2xl" style={{ backgroundColor: 'white' }}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b">
         <div className="flex items-center gap-2">
@@ -109,7 +109,7 @@ export function AskChatbot() {
               msg.role === 'user'
                 ? 'bg-primary text-primary-foreground'
                 : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100'
-            }`}>
+            }`} style={{ backgroundColor: msg.role === 'user' ? undefined : '#f3f4f6' }}>
               <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
               {msg.relatedLessons && msg.relatedLessons.length > 0 && (
                 <div className="mt-2 pt-2 border-t border-border/50">
