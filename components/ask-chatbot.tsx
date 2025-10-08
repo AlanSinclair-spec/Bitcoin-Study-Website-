@@ -84,12 +84,12 @@ export function AskChatbot() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 w-96 max-h-[600px] flex flex-col bg-background border rounded-lg shadow-2xl">
+    <div className="fixed bottom-6 right-6 z-50 w-96 max-h-[600px] flex flex-col bg-white dark:bg-gray-900 border rounded-lg shadow-2xl">
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b">
         <div className="flex items-center gap-2">
           <MessageCircle className="h-5 w-5 text-primary" />
-          <h3 className="font-semibold">Ask Me Anything</h3>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100">Ask Me Anything</h3>
         </div>
         <div className="flex gap-2">
           <Button size="sm" variant="ghost" onClick={clearChat}>
@@ -108,7 +108,7 @@ export function AskChatbot() {
             <div className={`max-w-[80%] rounded-lg p-3 ${
               msg.role === 'user'
                 ? 'bg-primary text-primary-foreground'
-                : 'bg-muted'
+                : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100'
             }`}>
               <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
               {msg.relatedLessons && msg.relatedLessons.length > 0 && (
@@ -131,7 +131,7 @@ export function AskChatbot() {
 
         {isThinking && (
           <div className="flex justify-start">
-            <div className="bg-muted rounded-lg p-3">
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-3">
               <div className="flex gap-1">
                 <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
                 <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
@@ -144,14 +144,14 @@ export function AskChatbot() {
 
       {/* Suggestions */}
       {messages.length <= 2 && (
-        <div className="p-4 border-t bg-muted/30">
-          <p className="text-xs font-medium mb-2">Try asking:</p>
+        <div className="p-4 border-t bg-gray-50 dark:bg-gray-800">
+          <p className="text-xs font-medium mb-2 text-gray-700 dark:text-gray-300">Try asking:</p>
           <div className="flex flex-wrap gap-2">
             {suggestedQuestions.slice(0, 3).map((q, idx) => (
               <button
                 key={idx}
                 onClick={() => handleSuggestion(q)}
-                className="text-xs px-2 py-1 bg-background border rounded-md hover:bg-accent transition-colors"
+                className="text-xs px-2 py-1 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors text-gray-800 dark:text-gray-200"
               >
                 {q}
               </button>
