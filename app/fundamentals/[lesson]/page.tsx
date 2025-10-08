@@ -8,6 +8,8 @@ import { ArrowLeft, ArrowRight, FileText, BookOpen } from 'lucide-react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { EverydayApplication } from '@/components/mdx/EverydayApplication';
+import { KeyTakeaway } from '@/components/mdx/KeyTakeaway';
 
 const lessons = [
   '1-introduction-to-bitcoin',
@@ -19,6 +21,8 @@ const lessons = [
 ];
 
 const mdxComponents = {
+  EverydayApplication,
+  KeyTakeaway,
   h1: (props: any) => <h1 className="scroll-m-20 text-4xl font-bold tracking-tight mt-8 mb-4" {...props} />,
   h2: (props: any) => <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight mt-8 mb-4" {...props} />,
   h3: (props: any) => <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight mt-6 mb-3" {...props} />,
@@ -27,16 +31,6 @@ const mdxComponents = {
   table: (props: any) => <table className="w-full my-6" {...props} />,
   th: (props: any) => <th className="border px-4 py-2 text-left font-bold" {...props} />,
   td: (props: any) => <td className="border px-4 py-2" {...props} />,
-  KeyTakeaway: ({ children }: any) => (
-    <div className="my-6 p-4 rounded-lg bg-primary/10 border-l-4 border-primary">
-      {children}
-    </div>
-  ),
-  EverydayApplication: ({ children }: any) => (
-    <div className="my-6 p-4 rounded-lg bg-secondary border-l-4 border-secondary-foreground">
-      {children}
-    </div>
-  ),
 };
 
 export async function generateStaticParams() {

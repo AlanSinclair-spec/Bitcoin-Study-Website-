@@ -6,9 +6,13 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, FileText, CheckCircle2 } from 'lucide-react';
+import { EverydayApplication } from '@/components/mdx/EverydayApplication';
+import { KeyTakeaway } from '@/components/mdx/KeyTakeaway';
 
 // MDX Components
 const mdxComponents = {
+  EverydayApplication,
+  KeyTakeaway,
   h1: (props: any) => <h1 className="scroll-m-20 text-4xl font-bold tracking-tight mt-8 mb-4" {...props} />,
   h2: (props: any) => <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight mt-8 mb-4" {...props} />,
   h3: (props: any) => <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight mt-6 mb-3" {...props} />,
@@ -112,11 +116,11 @@ export default async function ChapterPage({ params }: { params: Promise<{ chapte
             </CardHeader>
             <CardContent className="space-y-2">
               <div className="flex flex-wrap gap-2">
-                {chapter.metadata.tags.map((tag) => (
+                {chapter.metadata.tags?.map((tag) => (
                   <Badge key={tag} variant="secondary">
                     {tag}
                   </Badge>
-                ))}
+                )) || <p className="text-sm text-muted-foreground">No tags available</p>}
               </div>
             </CardContent>
           </Card>
@@ -145,7 +149,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ chapte
             </CardContent>
           </Card>
 
-          {chapter.metadata.figures.length > 0 && (
+          {chapter.metadata.figures && chapter.metadata.figures.length > 0 && (
             <Card>
               <CardHeader>
                 <CardTitle className="text-sm">Referenced Figures</CardTitle>
